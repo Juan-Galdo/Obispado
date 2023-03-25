@@ -8,4 +8,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   constructor(public _authService:LoginService) {}
+  logout(): void {
+    this._authService.loggedOut();
+  }
 }

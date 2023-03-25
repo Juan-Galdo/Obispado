@@ -1,11 +1,10 @@
-<body class="css-selector" style="height: 100vh; max-height: 100%">
+<body class="css-selector" style="height: 100vh; max-height: 80%">
   <nav>
     <div class="wrapper">
-      <div class="logo">
+      <div class="logo" styles="width: 80%">
         <a href="#">
-          <!-- <img src="../../assets/Images/logoObispado.png" width="100px" /> -->
-          Logo </a
-        ><br />
+          <img src="../../assets/Images/logoObispado.png" width="100px" />
+        </a>
       </div>
 
       <input type="radio" name="slider" id="menu-btn" />
@@ -14,66 +13,60 @@
         <label for="close-btn" class="btn close-btn"
           ><i class="fa fa-times"></i
         ></label>
-        <li *ngIf="_authService.Parishes()">
+        <li [hidden]="!_authService.Parishes()">
           <a routerLink="tutorial">Tutorial</a>
         </li>
 
-        <li>
-          <a *ngIf="_authService.loggedIn()" routerLink="planilla">Planilla</a>
+        <li [hidden]="!_authService.loggedIn()">
+          <a routerLink="planilla">Planilla</a>
         </li>
-        <li>
-          <a *ngIf="_authService.Administrator()" routerLink="parish"
-            >Parroquias</a
-          >
+
+        <li [hidden]="!_authService.Administrator()">
+          <a routerLink="parish">Parroquias</a>
         </li>
-        <li>
-          <a *ngIf="_authService.Administrator()" routerLink="signatory"
-            >Firmante</a
-          >
+
+        <li [hidden]="!_authService.Administrator()">
+          <a routerLink="signatory">Firmante</a>
         </li>
-        <li>
-          <a *ngIf="_authService.Administrator()" routerLink="certificate"
-            >Certificados</a
-          >
+
+        <li [hidden]="!_authService.Administrator()">
+          <a routerLink="certificate">Certificados</a>
         </li>
-        <li>
-          <a
-            *ngIf="_authService.Administrator()"
-            routerLink="certificatePending"
-            >Certificados Pendientes</a
-          >
+
+        <li [hidden]="!_authService.Administrator()">
+          <a routerLink="certificatePending">Certificados Pendientes</a>
         </li>
-        <li *ngIf="_authService.Administrator()">
+
+        <li [hidden]="!_authService.Administrator()">
           <a routerLink="certificatePrint">Certificados Parroquia</a>
         </li>
-        <li>
-          <a *ngIf="_authService.Administrator()" routerLink="user"
-            >Usuarios
-          </a>
+
+        <li [hidden]="!_authService.Administrator()">
+          <a routerLink="user">Usuarios</a>
         </li>
 
-        <li *ngIf="_authService.Parishes()">
+        <li [hidden]="!_authService.Parishes()">
           <a routerLink="certificateParish">Certificados</a>
         </li>
-        <li *ngIf="_authService.Parishes()">
+
+        <li [hidden]="!_authService.Parishes()">
           <a routerLink="certificatePrint">Imprimir Certificados</a>
         </li>
+        
         <li>
-          <a
-            *ngIf="_authService.loggedIn()"
+          <a *ngIf="_authService.loggedIn()"
             routerLink=""
-            (click)="_authService.loggedOut()"
-            >Salir</a
-          >
+            (click)="logout()"
+            >Salir</a>
         </li>
-
+    
         <li>
           <a *ngIf="!_authService.loggedIn()" routerLink="login">Login</a>
         </li>
       </ul>
-      <label for="menu-btn" class="btn menu-btn"
-        ><i class="fa fa-bars"></i
-      ></label>
+      <label for="menu-btn" class="btn menu-btn">
+        <i class="fa fa-bars "></i>
+      </label>
     </div>
   </nav>
   <br />
