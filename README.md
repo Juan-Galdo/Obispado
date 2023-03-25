@@ -13,7 +13,7 @@ Por ahora realizaremos tres cosas:
 
 * Clonar el repositorio
 * Subir cambios al repositorio
-* Actualizar el repositorio en su local (es para tener los cambios que hicieron los demás compañeros)
+* Actualizar el repositorio local (es para tener los cambios que hicieron los demás compañeros)
 
 ### Clonar repositorio
 
