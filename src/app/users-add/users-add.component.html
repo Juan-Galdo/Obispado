@@ -1,0 +1,102 @@
+
+<br><br><br><br>
+
+<div class="container" >
+  <br>
+  <br>
+
+
+<form class="row g-3" class="was-validated">
+  <div>
+    <div class="submit-form row g-2 ">
+
+    <div class="form-group col-md-6">
+      <div class="col-sm-12 form-floating">
+          <input type="text" id="UserName" name="UserName" class="form-control"
+                required minlength="5"
+                [(ngModel)]="User.UserName" #UserName="ngModel">
+
+                <div class="invalid-feedback" *ngIf="UserName.errors?.required" >
+                  El nombre es requerido.
+                </div>
+
+                <div class="invalid-feedback" *ngIf="UserName.errors?.minlength">
+                  El nombre debe contener mas de 5 caracteres.
+                </div>
+
+                <label for="floatingInputGrid"> Nombre de usuario </label>
+        </div>
+      </div>
+
+      <div class="form-group col-md-6">
+        <div class="col-sm-12 form-floating">
+            <input type="password" id="Password" name="Password" class="form-control"
+                  required minlength="5"
+                  [(ngModel)]="User.Password" #Password="ngModel">
+
+                  <div class="invalid-feedback" *ngIf="Password.errors?.required" >
+                    El password es requerido.
+                  </div>
+
+                  <div class="invalid-feedback" *ngIf="Password.errors?.minlength">
+                    El password debe contener mas de 5 caracteres.
+                  </div>
+
+                  <label for="floatingInputGrid"> Password de usuario </label>
+          </div>
+        </div>
+
+
+        <div class="form-group col-md-6">
+          <div class="col-sm-12 form-floating">
+              <input type="text" id="Gmail" name="Gmail" class="form-control"
+                    required minlength="5"
+                    [(ngModel)]="User.Gmail" #Gmail="ngModel">
+
+                    <div class="invalid-feedback" *ngIf="Gmail.errors?.required" >
+                      El Gmail es requerido.
+                    </div>
+
+                    <div class="invalid-feedback" *ngIf="Gmail.errors?.minlength">
+                      El Gmail debe contener mas de 5 caracteres.
+                    </div>
+
+                    <label for="floatingInputGrid"> Gmail de usuario </label>
+            </div>
+          </div>
+
+    <div class="form-group col-md-6">
+      <div class="col-sm-12 form-floating">
+        <select class="form-control" (change)="capturerRole($event)">
+          <option value="Parishes">Parroquias</option>
+          <option value="Administrator">Administrador</option>
+        </select>
+        <label for="floatingInputGrid">seleccione un rol para el usuario.</label>
+      </div>
+    </div>
+
+
+    <div class="form-group col-md-6">
+      <div class="col-sm-12 form-floating">
+        <select required name="IdParish" #IdParish="ngModel"
+                 [(ngModel)]="optionParish" class="form-control"
+                  (change)="capturer(IdParish.value)" #Gmail="ngModel">
+            <option *ngFor="let dato of parishesList" value= {{dato.id}}>
+              {{dato.name}}
+            </option>
+        </select>
+        <div class="invalid-feedback" *ngIf="Gmail.errors?.required" >
+          Debe seleccionar una parroquia.
+        </div>
+       <label for="floatingInputGrid">seleccione una parroquia.</label>
+      </div>
+    </div>
+
+
+    <div class="form-group col-md-12">
+      <hr>
+      <button routerLink="/user" class="btn btn-warning " >Atras</button> &nbsp;
+      <button (click)="saveCertificate()" class="btn btn-success">Guardar</button>
+    </div>
+  </div>
+

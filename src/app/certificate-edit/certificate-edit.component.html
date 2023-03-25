@@ -1,0 +1,138 @@
+<br><br><br><br>
+
+<div class="container">
+  <br><br>
+
+
+<form  autocomplete="off">
+
+  <div class="row g-2">
+
+    <div class="form-group col-md-6">
+      <div class="col-sm-12 form-floating">
+        <input type="text" class="form-control" id="Name"  [(ngModel)]="certificate.Name" name="Name"/>
+        <label for="floatingInputGrid">Nombre (S)</label>
+      </div>
+    </div>
+
+    <div class="form-group col-md-6">
+      <div class="col-sm-12 form-floating">
+        <input  type="text" class="form-control" id="SurName" [(ngModel)]="certificate.SurName"name="SurName"/>
+        <label for="floatingInputGrid">Apellido (S)</label>
+      </div>
+    </div>
+
+    <div class="form-group col-md-6">
+      <div class="col-sm-12 form-floating">
+        <input type="text" class="form-control" id="Ci" [(ngModel)]="certificate.Ci" name="Ci"/>
+        <label for="floatingInputGrid">Cedula </label>
+      </div>
+    </div>
+
+    <div class="form-group col-md-6">
+      <div class="col-sm-12 form-floating">
+        <input type="number" class="form-control" id="Age" [(ngModel)]="certificate.Age" name="Age"/>
+        <label for="floatingInputGrid">Edad</label>
+      </div>
+    </div>
+
+    <div class="form-group col-md-6">
+      <div class="col-sm-12 form-floating">
+        <input type="text" class="form-control" id="Dad" [(ngModel)]="certificate.Dad" name="Dad" />
+        <label for="floatingInputGrid">Nombre completo del padre</label>
+      </div>
+    </div>
+
+
+    <div class="form-group col-md-6">
+      <div class="col-sm-12 form-floating">
+        <input type="text"  class="form-control" id="Mother" [(ngModel)]="certificate.Mother" name="Mother"/>
+        <label for="floatingInputGrid">Nombre completo de la madre</label>
+      </div>
+    </div>
+
+    <div class="form-group col-md-6">
+      <div class="col-sm-12 form-floating">
+        <input type="text" class="form-control" id="GoodParents" [(ngModel)]="certificate.GoodParents" name="GoodParents" />
+        <label for="floatingInputGrid">Padrino (S)</label>
+      </div>
+    </div>
+    <div class="form-group col-md-6">
+      <div class="col-sm-12 form-floating">
+        <input type="text" class="form-control" id="Baptize" [(ngModel)]="certificate.Baptize" name="Baptize"/>
+        <label for="floatingInputGrid">Lugar de bautizo </label>
+      </div>
+    </div>
+
+    <div class="form-group col-md-6">
+      <div class="col-sm-12 form-floating">
+        <input type="text" class="form-control" id="Confirming" [(ngModel)]="certificate.Confirming" name="Confirming"/>
+        <label for="floatingInputGrid">Ministro Confirmante </label>
+      </div>
+    </div>
+
+    <div class="form-group col-md-6">
+      <div class="col-sm-12 form-floating">
+        <input type="number" class="form-control" id="NumberBook" [(ngModel)]="certificate.NumberBook" name="NumberBook"/>
+        <label for="floatingInputGrid">Numero de libro </label>
+      </div>
+    </div>
+
+    <div class="form-group col-md-6">
+      <div class="col-sm-12 form-floating">
+        <input type="number"class="form-control" id="NumberPage" [(ngModel)]="certificate.NumberPage" name="NumberPage" />
+        <label for="floatingInputGrid">Numero de Pagina </label>
+      </div>
+    </div>
+
+    <div class="form-group col-md-6">
+      <div class="col-sm-12 form-floating">
+        <input type="number" class="form-control" id="NumberInvoice" [(ngModel)]="certificate.NumberInvoice" name="NumberInvoice"/>
+        <label for="floatingInputGrid">Numero de Folio </label>
+      </div>
+    </div>
+
+
+
+    <div class="form-group col-md-6">
+      <div class="col-sm-12 form-floating">
+        <input type="date" class="form-control"
+              value="2020-11-30"id="fecha" [(ngModel)]="fecha" name="fecha"/>
+        <label for="floatingInputGrid">Fecha de confirmacion </label>
+      </div>
+    </div>
+
+
+
+
+    <div class="form-group col-md-6">
+      <div class="col-sm-12 form-floating">
+        <select name="IdParish" #IdParish="ngModel"
+                 [(ngModel)]="optionParish" class="form-control"
+                  (change)="capturer(IdParish.value)" >
+            <option *ngFor="let dato of parishesList" value= {{dato.id}}>
+              {{dato.name}}
+            </option>
+        </select>
+       <label for="floatingInputGrid">Seleccione Lugar de confirmacion</label>
+      </div>
+    </div>
+
+    <div class="form-group col-md-12">
+      <hr>
+      <button routerLink="/certificatePending" class="btn btn-warning " *ngIf="pendingList()" >Atras</button> &nbsp;
+      <button routerLink="/certificate" class="btn btn-warning" *ngIf="!pendingList()" >Atras</button> &nbsp;
+      <button (click)="update('print')" class="btn btn-primary" *ngIf="!pendingList()" >Editar e imprimir</button> &nbsp;
+      <button (click)="update('')" class="btn btn-success ">Guardar</button>
+    </div>
+  </div>
+
+
+
+  <div class="form-group row ">
+
+  </div>
+
+
+
+</form>

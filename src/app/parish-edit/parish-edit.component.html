@@ -1,0 +1,71 @@
+<br><br><br><br>
+
+<div class="container">
+  <br><br>
+
+<form class="row g-3" class="was-validated">
+
+  <div>
+    <div class="submit-form row g-2 ">
+
+
+      <div class="form-group col-md-6">
+        <div class="col-sm-12 form-floating">
+            <input type="text" id="name" name="name" class="form-control"
+                  required minlength="5"
+                  [(ngModel)]="parish.Name" #name="ngModel">
+
+                  <div class="invalid-feedback" *ngIf="name.errors?.required" >
+                    El nombre es requerido.
+                  </div>
+
+                  <div class="invalid-feedback" *ngIf="name.errors?.minlength">
+                    El nombre debe contener mas de 5 caracteres.
+                  </div>
+
+                  <label for="floatingInputGrid"> Nombre de parroquia </label>
+          </div>
+        </div>
+
+        <div class="form-group col-md-6">
+
+            <div class="col-sm-12 form-floating">
+                <input type="text" id="Phone" name="Phone" class="form-control"
+                      required minlength="4"
+                      [(ngModel)]="parish.Phone" #Phone="ngModel" >
+
+                    <div  class="invalid-feedback" *ngIf="Phone.errors?.required">
+                      El Telefono-Celular es requerido.
+                    </div>
+                    <div  class="invalid-feedback" *ngIf="Phone.errors?.minlength">
+                      El Telefono-Celular debe contener mas de 4 caracteres.
+                    </div>
+                    <label for="floatingInputGrid">Celular</label>
+              </div>
+        </div>
+
+        <div class="form-group col-md-12">
+          <div class="col-sm-12 form-floating">
+            <input type="text" id="Direction" name="Direction" class="form-control"
+            required minlength="4"
+            [(ngModel)]="parish.Direction" #Direction="ngModel">
+
+                  <div class="invalid-feedback" *ngIf="Direction.errors?.required">
+                    La Direccion es requerido.
+                  </div>
+                  <div  class="invalid-feedback" *ngIf="Direction.errors?.minlength">
+                    La Direccion debe contener mas de 5 caracteres.
+                  </div>
+            <label for="floatingInputGrid"> Direccion de parroquia </label>
+          </div>
+        </div>
+
+        <div class="form-group col-md-12">
+          <hr>
+             <button routerLink="/parish" class="btn btn-warning "  >Atras</button> &nbsp;
+             <button  (click)="update()" class="btn btn-success ">Guardar  </button>
+        </div>
+      </div>
+
+
+  </div>

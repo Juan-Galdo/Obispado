@@ -1,0 +1,96 @@
+<br><br><br><br>
+<!-- Aqui silencie este fragmento del codigo que es el icono de carga sobrepuesto en la pantalla, este desaparece si recibe info del backend
+por ahora estaria envano hasta que logren conectar al backend -->
+<!-- <div class="overlay" *ngIf="!load" >
+   <div class="loader-container">
+      <div class="loader"></div>
+      <div class="loader2"></div>
+   </div>
+</div> -->
+<!-- Se supone que aqui, al lado del "class=container" va lo que es  , sirve solo para mostrar o no el icono de carga, lo borre -->
+<div class="container">
+   <br>
+   <br>
+   <div style="text-align: center;">
+      <h2>FIRMANTES</h2>
+   </div>
+   <p>
+      <a [routerLink]="['/addSignatory']" class="btn btn-success ">Nueva Encargado</a>
+   </p>
+   <div class="input-group mb-3">
+      <div class="input-group-prepend">
+         <button (click)="Find()" class="btn btn-outline-secondary" type="button">BUSCAR</button>
+      </div>
+      <input [(ngModel)]="find" type="text" class="form-control" placeholder=""
+      aria-label="INGRESE SU BUSQUEDA" aria-describedby="basic-addon1">
+   </div>
+   <div class="table-responsive">
+      <table class="table table-striped table-dark " >
+         <thead >
+            <tr>
+               <th >NOMBRE</th>
+               <th>APELLIDO</th>
+               <th>PUESTO</th>
+               <th>SELECCIONADO</th>
+               <th colspan="3">ACCIONES</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr *ngIf="(signatoriesList)?.length==0">
+              <td colspan="5" style="text-align: center;">
+              <span> No se encontraron resultados ...</span>
+              </td>
+            </tr>
+            <tr *ngFor="let signatory of signatoriesList">
+               <td>{{ signatory.name}}</td>
+               <td>{{ signatory.surName }}</td>
+               <td>{{ signatory.position }}</td>
+               <td *ngIf="signatory.verified==true"><i class="fa fa-check fa-2x"></i></td>
+               <td *ngIf="signatory.verified!=true"><i class="fa fa-times fa-2x"></i></td>
+               <td>
+                  <a (click)="updateSignatory(signatory.id)" class="btn btn-space btn-success ">Firmante</a>
+               </td>
+               <td>
+                  <a routerLink="/signatory/{{ signatory.id }}"
+                     class="btn btn-space btn-primary ">
+                  <i class="fa fa-edit fa-2x"></i>
+                  </a>
+               </td>
+               <td>
+                  <a (click)="delete(signatory.id)"
+                     class="btn btn-space btn-danger ">
+                  <i class="fa fa-trash fa-2x"></i>
+                  </a>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+   </div>
+   <div style="text-align: center;">
+      <ul class="pagination">
+         <li class="page-item col-md-1 " >
+            <select class="form-control" (change)="Quantity($event)">
+              <option selected disabled>{{optionSelect}}</option>
+              <option *ngFor="let web of list">{{web}}</option>
+            </select>
+         </li>
+         &nbsp;
+         <li class="page-item" >
+            <p *ngIf="metaData.HasPreviousPage" class="form-control" type="button" (click)="Preview()">Anterior</p>
+            <p *ngIf="!metaData.HasPreviousPage" class="form-control" type="button">Anterior</p>
+         </li>
+         <li class="page-item page-item ">
+            <p class="form-control" >{{metaData.CurrentPage}}</p>
+         </li>
+         <li class="page-item" >
+            <p *ngIf="metaData.HasNextPage" class="form-control" type="button"(click)="Next()">Siguiente</p>
+            <p *ngIf="!metaData.HasNextPage" class="form-control"  type="button">Siguiente</p>
+         </li>
+      </ul>
+      <ul class="pagination">
+         <li class="page-item">
+            <label  for="TotalPages">P&aacute;gina {{metaData.CurrentPage}} de {{metaData.TotalPages}}  </label>
+         </li>
+      </ul>
+   </div>
+</div>

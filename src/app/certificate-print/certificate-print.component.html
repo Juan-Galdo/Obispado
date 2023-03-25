@@ -1,0 +1,116 @@
+<br><br><br><br>
+<!-- Aqui silencie este fragmento del codigo que es el icono de carga sobrepuesto en la pantalla, este desaparece si recibe info del backend
+por ahora estaria envano hasta que logren conectar al backend -->
+<!-- <div class="overlay" *ngIf="!load" >
+   <div class="loader-container">
+      <div class="loader"></div>
+      <div class="loader2"></div>
+   </div>
+</div> -->
+<!-- Se supone que aqui, al lado del "class=container" va lo que es  , sirve solo para mostrar o no el icono de carga, lo borre -->
+<div class="container">
+    <br>
+    <br>
+
+  <div style="text-align: center;">
+    <h2>CERTIFICADOS POR IGLESIA</h2>
+  </div>
+
+
+<p>
+  <a (click)="Find()" class="btn btn-success ">buscar</a> &nbsp;
+  <a (click)="printCertificates()" class="btn btn-primary ">Imprimir certificados</a>
+</p>
+
+<div class="row g-2">
+  <div *ngIf="this.LoginService.Administrator()==true" class="form-group col-md-4" >
+    <div class="col-sm-12 form-floating">
+      <select name="IdParish" #IdParish="ngModel"
+               [(ngModel)]="parishId" class="form-control"
+                (change)="capturer(IdParish.value)" >
+          <option *ngFor="let dato of parishesList" value= {{dato.id}}>
+            {{dato.name}}
+          </option>
+      </select>
+     <label for="floatingInputGrid">Seleccione Lugar de confirmacion</label>
+    </div>
+  </div>
+
+  <div class="form-group col-md-4">
+    <div class="col-sm-12 form-floating">
+      <input type="date" class="form-control"
+             id="Since" [(ngModel)]="Since" name="Since" />
+      <label for="floatingInputGrid">Fecha Inicio (dd/mm/aaaa)</label>
+    </div>
+  </div>
+  <div class="form-group col-md-4">
+    <div class="col-sm-12 form-floating">
+      <input type="date" class="form-control"
+             id="Until" [(ngModel)]="Until"  name="Until"/>
+      <label for="floatingInputGrid">Fecha Final (dd/mm/aaaa)</label>
+    </div>
+  </div>
+</div>
+<br>
+
+<div class="table-responsive">
+<table class="table table-dark " >
+  <thead >
+      <tr style="text-align: center;">
+          <th>Lugar de Confirmacion</th>
+          <th>Ci</th>
+          <th>Nombre</th>
+          <th>Apellido</th>
+          <th>Fecha (DD-MM-YYYY)</th>
+      </tr>
+  </thead>
+<tbody>
+  <tr *ngIf="(certificateList)?.length==0">
+    <td colspan="6" style="text-align: center;">
+    <span> No se encontraron resultados ...</span>
+    </td>
+  </tr>
+  <tr *ngFor="let certificate of certificateList" style="text-align: center;">
+      <td >{{ parish }}</td>
+      <td >{{ certificate.ci}}</td>
+      <td >{{ certificate.name}}</td>
+      <td >{{ certificate.surName}}</td>
+      <td >{{certificate.dateConfirmation | date:'dd/MM/yyyy'}}</td>
+   </tr>
+</tbody>
+</table>
+</div>
+
+
+<div style="text-align: center;">
+    <ul class="pagination">
+      <li class="page-item col-md-1">
+        <select class="form-control" (change)="Quantity($event)">
+            <option *ngFor="let web of list">{{web}}</option>
+        </select>
+      </li>
+      &nbsp;
+
+      <li class="page-item" >
+          <p *ngIf="metaData.HasPreviousPage" class="form-control" type="button" (click)="Preview()">Anterior</p>
+          <p *ngIf="!metaData.HasPreviousPage" class="form-control" type="button">Anterior</p>
+      </li>
+
+      <li class="page-item page-item "><p class="form-control" >{{metaData.CurrentPage}}</p></li>
+
+      <li class="page-item" >
+        <p *ngIf="metaData.HasNextPage" class="form-control" type="button"(click)="Next()">Siguiente</p>
+        <p *ngIf="!metaData.HasNextPage" class="form-control"  type="button">Siguiente</p>
+      </li>
+
+
+    </ul>
+
+    <ul class="pagination">
+      <li class="page-item">
+        <label  for="TotalPages">P&aacute;gina {{metaData.CurrentPage}} de {{metaData.TotalPages}}  </label>
+      </li>
+    </ul>
+</div>
+
+

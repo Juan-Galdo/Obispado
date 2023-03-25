@@ -1,0 +1,81 @@
+<body class="css-selector" style="height: 100vh; max-height: 100%">
+  <nav>
+    <div class="wrapper">
+      <div class="logo">
+        <a href="#">
+          <!-- <img src="../../assets/Images/logoObispado.png" width="100px" /> -->
+          Logo </a
+        ><br />
+      </div>
+
+      <input type="radio" name="slider" id="menu-btn" />
+      <input type="radio" name="slider" id="close-btn" />
+      <ul class="nav-links">
+        <label for="close-btn" class="btn close-btn"
+          ><i class="fa fa-times"></i
+        ></label>
+        <li *ngIf="_authService.Parishes()">
+          <a routerLink="tutorial">Tutorial</a>
+        </li>
+
+        <li>
+          <a *ngIf="_authService.loggedIn()" routerLink="planilla">Planilla</a>
+        </li>
+        <li>
+          <a *ngIf="_authService.Administrator()" routerLink="parish"
+            >Parroquias</a
+          >
+        </li>
+        <li>
+          <a *ngIf="_authService.Administrator()" routerLink="signatory"
+            >Firmante</a
+          >
+        </li>
+        <li>
+          <a *ngIf="_authService.Administrator()" routerLink="certificate"
+            >Certificados</a
+          >
+        </li>
+        <li>
+          <a
+            *ngIf="_authService.Administrator()"
+            routerLink="certificatePending"
+            >Certificados Pendientes</a
+          >
+        </li>
+        <li *ngIf="_authService.Administrator()">
+          <a routerLink="certificatePrint">Certificados Parroquia</a>
+        </li>
+        <li>
+          <a *ngIf="_authService.Administrator()" routerLink="user"
+            >Usuarios
+          </a>
+        </li>
+
+        <li *ngIf="_authService.Parishes()">
+          <a routerLink="certificateParish">Certificados</a>
+        </li>
+        <li *ngIf="_authService.Parishes()">
+          <a routerLink="certificatePrint">Imprimir Certificados</a>
+        </li>
+        <li>
+          <a
+            *ngIf="_authService.loggedIn()"
+            routerLink=""
+            (click)="_authService.loggedOut()"
+            >Salir</a
+          >
+        </li>
+
+        <li>
+          <a *ngIf="!_authService.loggedIn()" routerLink="login">Login</a>
+        </li>
+      </ul>
+      <label for="menu-btn" class="btn menu-btn"
+        ><i class="fa fa-bars"></i
+      ></label>
+    </div>
+  </nav>
+  <br />
+  <router-outlet></router-outlet>
+</body>
