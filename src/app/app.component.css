@@ -1,6 +1,41 @@
 .nav-links {
     width: 60%;
   }
-  nav {
-    max-width: 91%;
+
+nav {
+    max-width: 100%;
+    position: fixed;
+    z-index: 99;
+    width: 100%;
+    background: #8aa373;
+}
+
+nav .wrapper {
+    position: relative;
+    max-width: auto;
+    padding: 10px 30px;
+    height: auto;
+    line-height: 70px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
+
+.espacioArriba  {
+    width: 10%;
+}
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav {
+  margin-bottom: 100%;
+}
+
+nav .logo {
+  flex: 0 0 auto;
+  margin-right: auto;
+}

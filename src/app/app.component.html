@@ -11,8 +11,7 @@
       <input type="radio" name="slider" id="close-btn" />
       <ul class="nav-links">
         <label for="close-btn" class="btn close-btn"
-          ><i class="fa fa-times"></i
-        ></label>
+          ><i class="fa fa-times"></i></label>
         <li [hidden]="!_authService.Parishes()">
           <a routerLink="tutorial">Tutorial</a>
         </li>
@@ -60,8 +59,8 @@
             >Salir</a>
         </li>
     
-        <li>
-          <a *ngIf="!_authService.loggedIn()" routerLink="login">Login</a>
+        <li class="login-form">
+          <a [hidden]="_authService.loggedIn()"  routerLink="login">Login</a>
         </li>
       </ul>
       <label for="menu-btn" class="btn menu-btn">
@@ -69,6 +68,5 @@
       </label>
     </div>
   </nav>
-  <br />
   <router-outlet></router-outlet>
 </body>
