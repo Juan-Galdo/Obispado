@@ -62,7 +62,7 @@ button {
 
 .container-login100 {
   width: 100%;
-  min-height: 95vh;
+  min-height: 100vh;
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -200,7 +200,7 @@ button {
 }
 
 .input100:focus + .focus-input100 + .symbol-input100 {
-  color: #c91d0a;
+  color: #d92b3a;
   padding-left: 28px;
 }
 
@@ -219,16 +219,17 @@ button {
 }
 
 .login100-form-btn {
-  font-family: Montserrat-Bold;
+  font-family: Poppins-Bold;
   font-size: 15px;
+  font-weight: 400;
   line-height: 1.5;
   color: #fff;
   text-transform: uppercase;
-
+  cursor: pointer;
   width: 100%;
   height: 50px;
   border-radius: 25px;
-  background: #c91d0a;
+  background: #d92b3a;
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -245,7 +246,7 @@ button {
 }
 
 .login100-form-btn:hover {
-  background: #333333;
+  background: #bf9663;
 }
 
 @media (max-width: 992px) {
