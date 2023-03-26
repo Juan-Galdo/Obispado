@@ -1,4 +1,4 @@
-* {
+/* * {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
@@ -16,7 +16,6 @@ li {
   list-style-type: none;
 }
 
-/*---------------------------------------------*/
 input {
   outline: none;
   border: none;
@@ -48,7 +47,6 @@ input:-ms-input-placeholder {
   color: #999999;
 }
 
-/*---------------------------------------------*/
 button {
   outline: none !important;
   border: none;
@@ -92,8 +90,6 @@ button {
   padding: 95px 130px 100px 95px;
 }
 
-/*------------------------------------------------------------------
-[  ]*/
 .login100-pic {
   width: 316px;
 }
@@ -118,7 +114,6 @@ button {
   padding-bottom: 54px;
 }
 
-/*---------------------------------------------*/
 .wrap-input100 {
   position: relative;
   width: 100%;
@@ -140,8 +135,6 @@ button {
   padding: 0 30px 0 68px;
 }
 
-/*------------------------------------------------------------------
-[ Focus ]*/
 .focus-input100 {
   display: block;
   position: absolute;
@@ -204,8 +197,6 @@ button {
   padding-left: 28px;
 }
 
-/*------------------------------------------------------------------
-[ Button ]*/
 .container-login100-form-btn {
   width: 100%;
   display: -webkit-box;
@@ -280,5 +271,132 @@ button {
 @media (max-width: 576px) {
   .wrap-login100 {
     padding: 100px 15px 33px 15px;
+  }
+} */
+
+/*Tamaño de la Pagina*/
+.main-page {
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+/*Imagen de Fondo*/
+.background {
+  height: 100%;
+  width: 100%;
+  background-image: url("../../assets/Images/bg1.jpeg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+}
+
+/*Tamaño de la Tarjeta donde esta el contenido, esta configuracion es para WEB de PC*/
+/*Mas abajo esta la configuracion para moviles*/
+.mat-card {
+  width: 900px;
+  height: 680px;
+  max-width: 100%;
+  background-color: rgba(52, 44, 44, 0.412);
+  backdrop-filter: blur(11px);
+}
+
+/*Cambiamos el titulo de la tarjeta por un texto BOLD y centralizado*/
+.mat-card-title {
+  text-align: center;
+  font-weight: bold;
+}
+/*Alineamos el Logo y el margin adecuamos al medio, el transform reescala el tamaño del icono*/
+/*Puede usarse una imagen en lugar del icono, nomas que por paja puse el icono*/
+.logo {
+  padding-left: 18px;
+  margin: 60px;
+  transform: scale(3.5);
+}
+
+/*Una linea vertical que divide el login*/
+.vertical-divider {
+  height: 450px;
+  border: 2px solid;
+  border-color: white;
+}
+
+.mat-divider {
+  border-color: rgba(255, 255, 255, 0.741);
+}
+/*Alineamos el formulario para la vista de PC*/
+.formulario {
+  padding-right: 18px;
+}
+/*Esta imagen del formulario, igual pueden reemplazar por otra imagen*/
+.account_img {
+  transform: scale(6);
+  margin: 30px;
+  color: white;
+}
+/*Titulo donde dice 'BIENVENIDO'*/
+.account_title {
+  margin: 22px;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+}
+/*Tamaño del formulario y este es responsive*/
+.mat-form-field {
+  width: 100%;
+}
+/*El Contenido del Mat-Card sera centrado al medio y aumenta su tamaño*/
+.mat-card-content {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 80%;
+}
+/*Colores del boton, el :hover es para cuando se quiera pasar el boton por encima y cambiar el color*/
+.login-btn {
+  background-color: #c91d0a;
+  color: white;
+}
+
+.login-btn:hover {
+  transition: all 0.5s;
+  background-color: #bf9663;
+  color: white;
+}
+
+/*Texto para cambiar el color del texto a blanco*/
+.text-white {
+  color: white;
+}
+
+/*PA CUANDO SEA EN VISTA TELEFONO*/
+
+/*Cuando se trate de un telefono menor de 600px se haran los siguientes cambios automaticamente*/
+@media (max-width: 600px) {
+  /*La Tarjeta se adecua al tamaño del telefono*/
+  .mat-card {
+    margin: 5px;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    background-color: rgba(52, 44, 44, 0.412);
+    backdrop-filter: blur(10px);
+  }
+  /*El Icono del formulario se reduce*/
+  .account_img {
+    transform: scale(4);
+    margin: 30px;
+  }
+  /*El Contenido del formulario se reduce*/
+  .mat-card-content {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+  /*Alineamos el formulario*/
+  .formulario {
+    padding-right: 0px;
   }
 }
