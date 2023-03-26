@@ -1,5 +1,5 @@
 <body class="css-selector" style="height: 100vh; max-height: 80%">
-  <nav>
+  <nav *ngIf="_authService.loggedIn()">
     <div class="wrapper">
       <div class="logo" styles="width: 80%">
         <a href="#">
@@ -52,20 +52,19 @@
         <li [hidden]="!_authService.Parishes()">
           <a routerLink="certificatePrint">Imprimir Certificados</a>
         </li>
-        
+
         <li>
-          <a *ngIf="_authService.loggedIn()"
-            routerLink=""
-            (click)="logout()"
-            >Salir</a>
+          <a *ngIf="_authService.loggedIn()" routerLink="" (click)="logout()"
+            >Salir</a
+          >
         </li>
-    
+
         <li>
           <a *ngIf="!_authService.loggedIn()" routerLink="login">Login</a>
         </li>
       </ul>
       <label for="menu-btn" class="btn menu-btn">
-        <i class="fa fa-bars "></i>
+        <i class="fa fa-bars"></i>
       </label>
     </div>
   </nav>
