@@ -1,13 +1,7 @@
-.form-control {
-  color: #ffffff;
-  background-color: rgb(16, 15, 15);
-  border-color: #302f2f;
-  outline: none;
-}
+
 .mat-card{
   background-color: white;
 }
-
 /*EN el HTML veras que puse class="btn-mat-pruebita", bien aqui es donde editas y le daras el estilo que desees */
 /*Puede usar el class="btn-mat-pruebita" en los botones que deseas */
 .btn-mat-pruebita{
