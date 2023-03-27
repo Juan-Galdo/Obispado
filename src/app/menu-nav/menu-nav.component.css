@@ -1,7 +1,7 @@
 
 .active {
-    background-color: #1976d2;
-    color: white;
+    background-color: #BF9663;
+    color: rgb(11, 9, 9);
     transition: background-color 0.3s ease-in-out;
   }
   
@@ -15,14 +15,41 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-  }
-  .nav-links {
-    width: 60%;
+    background-color: #c6bfad;    
   }
   
+  .toolbar-row {
+    justify-content: flex-end;
+  }
+   
   .wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-  
+
+  /* el tamaño que acapara el menu al minimizar la pantalla */
+  .nav-links {
+    width: 60%;
+  }
+ 
+
+  /* para la animacion del navgar */
+  .nav-links li:hover {
+    transform: translateY(5px);
+   
+  }
+
+  .nav-links li:hover {
+    background-color: #4caf50;
+    color: white;
+  }
+ 
+  .nav-links li {
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .menu-1{
+    background-color: #8BBCCA;
+    
+  }
