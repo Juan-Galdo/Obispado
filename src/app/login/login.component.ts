@@ -44,7 +44,7 @@ export class LoginComponent implements OnInit {
         this.load = true;
         this.toastr.success('Logeado exitosamente.');
         /**Nos dirige a la pantalla de HOME, que es la misma que ven al principio antes de hacer Login xDDD */
-        this.Router.navigate(['/home']);
+        this.Router.navigate(['/parish']);
       },
       (error) => {
         this.load = true;

@@ -1,0 +1,28 @@
+
+.active {
+    background-color: #1976d2;
+    color: white;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  nav .wrapper {
+    position: relative;
+    max-width: auto;
+    padding: 30px 0px;
+    height: auto;
+    line-height: 70px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .nav-links {
+    width: 60%;
+  }
+  
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  

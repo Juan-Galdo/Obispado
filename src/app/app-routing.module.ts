@@ -21,6 +21,7 @@ import { LoginComponent } from './login/login.component';
 import { AuthGuard } from './auth.guard';
 import { CertificateParishComponent } from './certificate-parish/certificate-parish.component';
 import { CertificateParishAddComponent } from './certificate-parish-add/certificate-parish-add.component';
+import { MenuNavComponent } from './menu-nav/menu-nav.component';
 
 const routes: Routes = [
   /*** Se silencio estas rutas donde el Guardia impide que se acceda */
@@ -90,8 +91,8 @@ const routes: Routes = [
   { path: 'user/:Id', component: UsersEditComponent, canActivate: [AuthGuard] },
   { path: 'planilla', component: PlanillaComponent, canActivate: [AuthGuard] },
   { path: 'tutorial', component: TutorialComponent, canActivate: [AuthGuard] },
-  { path: 'login', component: LoginComponent },
-  { path: '**', component: HomeComponent },
+  /* { path: 'login', component: LoginComponent }, */
+  { path: '**', component: LoginComponent },
 
   /**** Estas rutas estan sin Guardias para hacer las pruebas, borrenlas cuando terminen los diseños para que vuelvan a usar el Login  */
   /*  {path: 'parish', component: ParishesComponent},

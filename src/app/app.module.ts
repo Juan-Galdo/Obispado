@@ -30,14 +30,14 @@ import { CertificateParishAddComponent } from './certificate-parish-add/certific
 import { CertificatePendingComponent } from './certificate-pending/certificate-pending.component';
 import { UsersComponent } from './users/users.component';
 import { UsersAddComponent } from './users-add/users-add.component';
-import { HeaderComponent } from './header/header.component';
 import { UsersEditComponent } from './users-edit/users-edit.component';
 import { CertificatePrintComponent } from './certificate-print/certificate-print.component';
 import { PlanillaComponent } from './planilla/planilla.component';
 import { TutorialComponent } from './tutorial/tutorial.component';
 import { MaterialCollectionModule } from './material-module';
 import { FlexLayoutModule } from '@angular/flex-layout';
-
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MenuNavComponent } from './menu-nav/menu-nav.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -57,11 +57,11 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     CertificatePendingComponent,
     UsersComponent,
     UsersAddComponent,
-    HeaderComponent,
     UsersEditComponent,
     CertificatePrintComponent,
     PlanillaComponent,
     TutorialComponent,
+    MenuNavComponent,
   ],
   imports: [
     BrowserModule,
@@ -72,6 +72,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     FormsModule,
     FlexLayoutModule,
     BrowserAnimationsModule,
+    MatToolbarModule,
     ToastrModule.forRoot()
   ],
   providers: [

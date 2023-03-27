@@ -1,19 +1,13 @@
+<!-- Primera Opción -->
 
-<div class="overlay" *ngIf="!load">
-  <div class="loader-container">
-    <div class="loader"></div>
-    <div class="loader2"></div>
-  </div>
-</div>
-
-<div class="limiter" *ngIf="load">
+<!-- <div class="limiter" *ngIf="load">
   <div class="container-login100">
     <div class="wrap-login100">
       <div class="login100-pic js-tilt" data-tilt>
         <img src="../../assets/Images/logoObispado.png" />
       </div>
       <form class="login100-form validate-form">
-        <span class="login100-form-title"> Obispado Login </span>
+        <span class="login100-form-title"> Inicia Sesión </span>
 
         <div
           class="wrap-input100 validate-input"
@@ -24,7 +18,7 @@
             class="input100"
             type="text"
             name="email"
-            placeholder="Email"
+            placeholder="Correo"
           />
           <span class="focus-input100"></span>
           <span class="symbol-input100">
@@ -38,7 +32,7 @@
             class="input100"
             type="password"
             name="pass"
-            placeholder="Password"
+            placeholder="Contraseña"
           />
           <span class="focus-input100"></span>
           <span class="symbol-input100">
@@ -47,9 +41,80 @@
         </div>
 
         <div class="container-login100-form-btn">
-          <button (click)="Login()" class="login100-form-btn">Login</button>
+          <button (click)="Login()" class="login100-form-btn">Ingresar</button>
         </div>
       </form>
     </div>
+  </div>
+</div> -->
+
+<div class="main-page">
+  <div class="background"></div>
+  <div>
+    <mat-card fxFlex="100%" fxFlex.sm="50%">
+      <mat-card-title>
+        <span class="text-white">SISTEMA OBISPADO</span>
+      </mat-card-title>
+      <mat-divider></mat-divider>
+      <br />
+      <mat-card-content fxLayout="row wrap" fxLayoutAlign="space-around center">
+        <div class="logo" fxHide.xs="true">
+          <img src="../../assets/Images/logoObispado.png" width="100px" />
+        </div>
+        <mat-divider
+          vertical
+          class="vertical-divider"
+          fxHide.xs="true"
+        ></mat-divider>
+        <div class="formulario" fxLayout="column" fxLayoutAlign="center center">
+          <div class="acount" fxLayout="column" fxLayoutAlign="center center">
+            <mat-icon class="account_img"> account_circle </mat-icon>
+            <br />
+            <span class="account_title">BIENVENIDO</span>
+          </div>
+          <form>
+            <mat-form-field appearance="fill" class="text-white">
+              <mat-label class="text-white"> Correo</mat-label>
+              <input
+                class="text-white"
+                matInput
+                [(ngModel)]="UserLogin.User"
+                type="text"
+                name="email"
+                required
+              />
+              <mat-icon matSuffix>alternate_email</mat-icon>
+            </mat-form-field>
+            <br />
+            <mat-form-field appearance="fill" class="text-white">
+              <mat-label class="text-white">Contraseña </mat-label>
+              <input
+                class="text-white"
+                matInput
+                [(ngModel)]="UserLogin.Password"
+                type="password"
+                name="pass"
+                required
+              />
+              <mat-icon matSuffix>lock</mat-icon>
+              <mat-hint class="text-white"
+                >¿Olvido su Contraseña? <u href="">Recuperar</u>
+              </mat-hint>
+            </mat-form-field>
+          </form>
+          <br />
+          <button mat-flat-button class="login-btn" (click)="Login()">
+            Iniciar Sesion
+          </button>
+        </div>
+      </mat-card-content>
+      <mat-divider></mat-divider>
+      <br />
+      <div>
+        <mat-hint fxLayout="row" fxLayoutAlign="start start" class="text-white">
+          Reportar fallos a: padrecoco@ucb.edu.bo - 60256526
+        </mat-hint>
+      </div>
+    </mat-card>
   </div>
 </div>
