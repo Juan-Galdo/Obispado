@@ -352,7 +352,7 @@ button {
   justify-content: center;
   align-items: center;
   display: flex;
-  height: 80%;
+  height: 90%;
 }
 /*Colores del boton, el :hover es para cuando se quiera pasar el boton por encima y cambiar el color*/
 .login-btn {
