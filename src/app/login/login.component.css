@@ -114,12 +114,7 @@ button {
   padding-bottom: 54px;
 }
 
-.wrap-input100 {
-  position: relative;
-  width: 100%;
-  z-index: 1;
-  margin-bottom: 10px;
-}
+
 
 .input100 {
   font-family: Poppins-Medium;
@@ -275,6 +270,12 @@ button {
 } */
 
 /*Tamaño de la Pagina*/
+.wrap-input100 {
+  position: relative;
+  width: 100%;
+  z-index: 1;
+  margin-bottom: 10px;
+}
 .main-page {
   height: 100%;
   width: 100%;
