@@ -82,6 +82,6 @@ export class LoginService {
     localStorage.removeItem('UserName');
     localStorage.removeItem('Role');
     localStorage.removeItem('ParishId');
-    this.Router.navigate(['/home']);
+    this.Router.navigate(['/login']);
   }
 }
