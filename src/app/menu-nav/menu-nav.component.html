@@ -1,12 +1,14 @@
 <nav *ngIf="_authService.loggedIn()">
     <div class="wrapper">
-      <mat-toolbar color="primary">
-        <mat-toolbar-row >
-          <div class="logo" styles="width: 80%">
-            <a>
-              <img src="../../assets/Images/logoObispado.png" width="100px" />
-            </a>
-          </div>
+      <mat-toolbar class="menu-1">
+        <mat-toolbar-row>    
+            <div class="logo" styles="width: 80%">
+                <a>
+                <img src="../../assets/Images/logoObispado.png" width="100px" />
+                </a>
+            </div>
+        <mat-toolbar-row class="toolbar-row">
+        </mat-toolbar-row>
     
           <input type="radio" name="slider" id="menu-btn" />
           <input type="radio" name="slider" id="close-btn" />
@@ -66,7 +68,8 @@
           </ul>
           <label for="menu-btn" class="btn menu-btn">
             <i class="fa fa-bars"></i>
-          </label> </mat-toolbar-row>
+          </label> 
+        </mat-toolbar-row>
       </mat-toolbar>
     </div>  
    
