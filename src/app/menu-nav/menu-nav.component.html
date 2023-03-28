@@ -137,23 +137,25 @@
         </li>
 
         <li [hidden]="!_authService.Parishes()" class="nav-item">
-          <a routerLink="certificatePrint" class="nav-link"
-            >Imprimir Certificados</a
-          >
+          <a routerLink="certificatePrint" class="nav-link">
+            Imprimir Certificados
+          </a>
         </li>
       </ul>
       <div class="d-flex justify-content-end">
-        <button
+      <!--   <button
           *ngIf="_authService.loggedIn()"
           class="nav-item"
           routerLink=""
           (click)="logout()"
           type="button"
-          class="btn btn-danger"
-        >
-          Salir
-        </button>
+          class="btn btn-danger">
+        </button> -->
+        <a routerLink="" (click)="logout()">
+          <i class="fas fa-sign-out-alt"></i> Salir
+        </a>
       </div>
     </div>
   </div>
+ <!-- Icono de círculo con x -->
 </nav>
