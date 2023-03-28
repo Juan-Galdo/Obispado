@@ -465,7 +465,7 @@ li {
   padding: 0;
 }
 .css-selector {
-  background: linear-gradient(87deg, #000000, #1d0000);
+  background: linear-gradient(87deg, #c6bfad, #8bbcca);
   background-size: 400% 400%;
 
   animation: AnimationName 20s ease infinite;
