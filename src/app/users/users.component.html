@@ -1,14 +1,13 @@
-<br /><br /><br /><br />
 <form autocomplete="off">
   <div class="container">
     <!-- Aqui silencie este fragmento del codigo que es el icono de carga sobrepuesto en la pantalla, este desaparece si recibe info del backend
 por ahora estaria envano hasta que logren conectar al backend -->
-    <!-- <div class="overlay" *ngIf="!load" >
+    <div class="overlay" *ngIf="!load" >
    <div class="loader-container">
       <div class="loader"></div>
       <div class="loader2"></div>
    </div>
-</div> -->
+</div>
     <!-- Se supone que aqui, al lado del "class=container" va lo que es  , sirve solo para mostrar o no el icono de carga, lo borre -->
 
     <div class="container">
@@ -21,33 +20,14 @@ por ahora estaria envano hasta que logren conectar al backend -->
         <a [routerLink]="['/addUser']" class="btn btn-success">Nuevo Usuario</a>
       </p>
       <!--  Ejemplo de Angular Material con un Card -->
-      <div>
-        <mat-card>
-          <mat-card-header>
-            <mat-card-title>
-              <p>Esto es un subtitulo</p>
-              <p>prueba</p>
-            </mat-card-title>
-            <mat-card-subtitle> Este es otro subtitulo </mat-card-subtitle>
-          </mat-card-header>
-          <mat-divider></mat-divider>
-          <mat-card-content>
-            <p>Contenido de Prueba</p>
-          </mat-card-content>
-          <mat-divider></mat-divider>
-          <mat-card-actions>
-            <button mat-flat-button class="btn-mat-pruebita">Click</button>
-          </mat-card-actions>
-        </mat-card>
-      </div>
+      
 
       <div class="input-group mb-3">
         <div class="input-group-prepend">
           <button
             (click)="Find()"
             class="btn btn-outline-secondary"
-            type="button"
-          >
+            type="button">
             BUSCAR
           </button>
         </div>

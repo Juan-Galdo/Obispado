@@ -1,111 +1,10 @@
-<!-- <nav *ngIf="_authService.loggedIn()">
-  <div class="wrapper">
-    <mat-toolbar color="primary">
-      <mat-toolbar-row>
-        <div class="logo" styles="width: 80%">
-          <a>
-            <img src="../../assets/Images/logoObispado.png" width="100px" />
-          </a>
-        </div>
 
-        <input type="radio" name="slider" id="menu-btn" />
-        <input type="radio" name="slider" id="close-btn" />
-        <ul class="nav-links">
-          <label for="close-btn" class="btn close-btn">
-            <i class="fa fa-times"></i
-          ></label>
-          <li [hidden]="!_authService.Parishes()">
-            <a routerLink="tutorial">Tutorial</a>
-          </li>
+      <a href="/" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+          <span class="fs-5 d-none d-sm-inline">Menu</span>
+      </a>
 
-          <li [hidden]="!_authService.loggedIn()">
-            <a routerLink="planilla">Planilla</a>
-          </li>
-
-          <li [hidden]="!_authService.Administrator()">
-            <a routerLink="parish">Parroquias</a>
-          </li>
-
-          <li [hidden]="!_authService.Administrator()">
-            <a routerLink="signatory">Firmante</a>
-          </li>
-
-          <li [hidden]="!_authService.Administrator()">
-            <a routerLink="certificate">Certificados</a>
-          </li>
-
-          <li [hidden]="!_authService.Administrator()">
-            <a routerLink="certificatePending">Certificados Pendientes</a>
-          </li>
-
-          <li [hidden]="!_authService.Administrator()">
-            <a routerLink="certificatePrint">Certificados Parroquia</a>
-          </li>
-
-          <li [hidden]="!_authService.Administrator()">
-            <a routerLink="user">Usuarios</a>
-          </li>
-
-          <li [hidden]="!_authService.Parishes()">
-            <a routerLink="certificateParish">Certificados</a>
-          </li>
-
-          <li [hidden]="!_authService.Parishes()">
-            <a routerLink="certificatePrint">Imprimir Certificados</a>
-          </li>
-
-          <li>
-            <a *ngIf="_authService.loggedIn()" routerLink="" (click)="logout()"
-              >Salir</a
-            >
-          </li>
-          
-          <li class="login-form">
-            <a [hidden]="_authService.loggedIn()" routerLink="login">Login</a>
-          </li>
-        </ul>
-        <label for="menu-btn" class="btn menu-btn">
-          <i class="fa fa-bars"></i>
-        </label>
-      </mat-toolbar-row>
-    </mat-toolbar>
-  </div>
-</nav> -->
-
-<!-- Nueva opcion de navbar -->
-<nav *ngIf="_authService.loggedIn()" class="navbar navbar-expand-lg my-bg">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">
-      <img
-        class="mr-auto"
-        src="../../assets/Images/logoObispado.png"
-        alt="Obispado"
-        width="80px"
-      />
-    </a>
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav my-custom mx-auto mb-2 mb-lg-0 ml-auto">
-        <li [hidden]="!_authService.Parishes()" class="nav-item">
-          <a
-            routerLink="tutorial"
-            class="nav-link active"
-            aria-current="page"
-            href="#"
-            >Tutorial</a
-          >
-        </li>
-        <li [hidden]="!_authService.loggedIn()" class="nav-item">
+      <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
+          <li [hidden]="!_authService.loggedIn()" class="nav-item">
           <a routerLink="planilla" class="nav-link" href="#">Planilla</a>
         </li>
         <li [hidden]="!_authService.Administrator()" class="nav-item">
@@ -146,8 +45,5 @@
             <i class="fas fa-sign-out-alt fa-2x"></i>
           </a>
       </ul>
-
-
-    </div>
-  </div>
-</nav>
+      <hr>
+ 

@@ -1,10 +1,10 @@
 
-.active {
+/* .active {
     background-color: #BF9663;
     color: rgb(11, 9, 9);
     transition: background-color 0.3s ease-in-out;
-  }
-  
+  } */
+  /* 
   nav .wrapper {
     position: relative;
     max-width: auto;
@@ -26,20 +26,20 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
+  } */
 
   /* el tamaño que acapara el menu al minimizar la pantalla */
-  .nav-links {
+ /*  .nav-links {
     width: 60%; 
-  }
+  } */
  
 
   /* para la animacion del navgar */
-  .nav-links li:hover {
+ /*  .nav-links li:hover {
     transform: translateY(5px);
    
-  }
-
+  } */
+/* 
   .nav-links li:hover {
     background-color: #4caf50;
     color: white;
@@ -53,3 +53,26 @@
     background-color: #8BBCCA;
     
   }
+
+
+  .component {
+    color: var(--bs-gray-800);
+    background-color: var(--bs-gray-100);
+    border: 1px solid var(--bs-gray-200);
+    border-radius: .25rem;
+  }
+  
+  .component-header {
+    color: var(--bs-purple);
+  }
+  body {
+    --bs-body-font-family: var(--bs-font-monospace);
+    --bs-body-line-height: 1.4;
+    --bs-body-bg: var(--bs-gray-100);
+  }
+  
+  .table {
+    --bs-table-color: var(--bs-gray-600);
+    --bs-table-bg: var(--bs-gray-100);
+    --bs-table-border-color: transparent;
+  } */
