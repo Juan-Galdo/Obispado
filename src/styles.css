@@ -12,6 +12,11 @@ input[type]:focus {
   outline: 0 none;
 }
 
+.fondo{
+background-color: antiquewhite;
+
+}
+
 * {
   margin: 0;
   padding: 0;

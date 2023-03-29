@@ -1,9 +1,14 @@
 
-      <a href="/" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
-          <span class="fs-5 d-none d-sm-inline">Menu</span>
-      </a>
-
+        
       <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
+        <a class="navbar-brandZ pt-10">
+          <img
+            class=" mt-5"
+            src="../../assets/Images/logoObispado.png"
+            alt="Obispado"
+            width="80px"
+          />
+        </a>
           <li [hidden]="!_authService.loggedIn()" class="nav-item">
           <a routerLink="planilla" class="nav-link" href="#">Planilla</a>
         </li>
@@ -41,9 +46,9 @@
           </a>
         </li>
        
-          <a routerLink="" (click)="logout()"class="nav-link pr-1">
+          <a routerLink="" (click)="logout()"class="nav-link pr-1 mt-auto">
             <i class="fas fa-sign-out-alt fa-2x"></i>
           </a>
       </ul>
-      <hr>
+      
  
