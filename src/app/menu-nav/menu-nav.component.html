@@ -1,66 +1,51 @@
+<ul
+  class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start"
+  id="menu"
+>
+  <a class="navbar-brandZ pt-10">
+    <img
+      class="mt-5"
+      src="../../assets/Images/logoObispado.png"
+      alt="Obispado"
+      width="80px"
+    />
+  </a>
+  <li [hidden]="!_authService.loggedIn()" class="nav-item">
+    <a routerLink="planilla" class="nav-link" href="#">Planilla</a>
+  </li>
+  <li [hidden]="!_authService.Administrator()" class="nav-item">
+    <a routerLink="parish" class="nav-link" href="#">Parroquias</a>
+  </li>
+  <li [hidden]="!_authService.Administrator()" class="nav-item">
+    <a routerLink="signatory" class="nav-link">Firmantes</a>
+  </li>
+  <li [hidden]="!_authService.Administrator()" class="nav-item">
+    <a routerLink="certificate" class="nav-link">Certificados</a>
+  </li>
+  <li [hidden]="!_authService.Administrator()" class="nav-item">
+    <a routerLink="certificatePending" class="nav-link"
+      >Certificados Pendientes</a
+    >
+  </li>
 
-        
-      <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
-        <a class="navbar-brandZ pt-10">
-          <img
-            class=" mt-5"
-            src="../../assets/Images/logoObispado.png"
-            alt="Obispado"
-            width="80px"
-          />
-        </a>
-          <li [hidden]="!_authService.loggedIn()" class="nav-item">
-          <a routerLink="planilla" class="nav-link" href="#">Planilla</a>
-        </li>
-        <li [hidden]="!_authService.Administrator()" class="nav-item">
-          <a routerLink="parish" class="nav-link" href="#">Parroquias</a>
-        </li>
-        <li [hidden]="!_authService.Administrator()" class="nav-item">
-          <a routerLink="signatory" class="nav-link">Firmantes</a>
-        </li>
-        <li [hidden]="!_authService.Administrator()" class="nav-item">
-          <a routerLink="certificate" class="nav-link">Certificados</a>
-        </li>
-        <li [hidden]="!_authService.Administrator()" class="nav-item">
-          <a routerLink="certificatePending" class="nav-link"
-            >Certificados Pendientes</a
-          >
-        </li>
+  <li [hidden]="!_authService.Administrator()" class="nav-item">
+    <a routerLink="certificatePrint" class="nav-link">Certificados Parroquia</a>
+  </li>
+  <li [hidden]="!_authService.Administrator()" class="nav-item">
+    <a routerLink="user" class="nav-link">Usuarios</a>
+  </li>
 
-        <li [hidden]="!_authService.Administrator()" class="nav-item">
-          <a routerLink="certificatePrint" class="nav-link"
-            >Certificados Parroquia</a
-          >
-        </li>
-        <li [hidden]="!_authService.Administrator()" class="nav-item">
-          <a routerLink="user" class="nav-link">Usuarios</a>
-        </li>
+  <li [hidden]="!_authService.Parishes()" class="nav-item">
+    <a routerLink="certificateParish" class="nav-link">Certificados</a>
+  </li>
 
-        <li [hidden]="!_authService.Parishes()" class="nav-item">
-          <a routerLink="certificateParish" class="nav-link">Certificados</a>
-        </li>
+  <li [hidden]="!_authService.Parishes()" class="nav-item">
+    <a routerLink="certificatePrint" class="nav-link">
+      Imprimir Certificados
+    </a>
+  </li>
 
-        <li [hidden]="!_authService.Parishes()" class="nav-item">
-          <a routerLink="certificatePrint" class="nav-link">
-            Imprimir Certificados
-          </a>
-        </li>
-<<<<<<< HEAD
-       
-          <a routerLink="" (click)="logout()"class="nav-link pr-1 mt-auto">
-            <i class="fas fa-sign-out-alt fa-2x"></i>
-          </a>
-      </ul>
-      
- 
-=======
-
-        <a routerLink="" (click)="logout()" class="nav-link pr-1">
-          Salir
-          <i class="fas fa-sign-out-alt">Hola</i>
-        </a>
-      </ul>
-    </div>
-  </div>
-</nav>
->>>>>>> ramaGaldo
+  <a routerLink="" (click)="logout()" class="nav-link pr-1 mt-auto">
+    <i class="fas fa-sign-out-alt fa-2x"></i>
+  </a>
+</ul>
