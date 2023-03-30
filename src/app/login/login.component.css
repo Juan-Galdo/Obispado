@@ -33,8 +33,7 @@
 
 /*Esta imagen del formulario, igual pueden reemplazar por otra imagen*/
 .account_img {
-  transform: scale(6);
-  margin: 30px;
+  transform: scale(4);
   color: white;
 }
 
@@ -53,7 +52,7 @@
 /*PA CUANDO SEA EN VISTA TELEFONO*/
 
 /*Cuando se trate de un telefono menor de 600px se haran los siguientes cambios automaticamente*/
-@media (max-width: 600px) {
+@media (min-width: 768px) {
   /*La Tarjeta se adecua al tamaño del telefono*/
   .mat-card {
     margin: 5px;

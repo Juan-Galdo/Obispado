@@ -74,10 +74,10 @@
       fxHide.xs="true"
     ></mat-divider> -->
     <div class="container-login">
-      <span class="d-block text-center text-white mt-3">Obispado Tarija</span>
+      <span class="d-block text-center text-white py-2">Login Page</span>
       <mat-divider></mat-divider>
       <div class="text-center .d-md-none .d-lg-block pt-4">
-        <mat-icon class="account_img"> account_circle </mat-icon>
+        <mat-icon class="account_img mt-3"> account_circle </mat-icon>
       </div>
       <p class="text-center text-white pt-4">Bienvenido</p>
       <form (ngSubmit)="Login()" class="px-4">
@@ -90,6 +90,7 @@
               placeholder="Username"
               name="email"
               [(ngModel)]="UserLogin.User"
+              autofocus
             />
             <label for="floatingInputGroup1">Correo</label>
           </div>
