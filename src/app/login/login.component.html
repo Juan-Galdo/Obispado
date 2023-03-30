@@ -63,42 +63,60 @@
   </div>
 </div> -->
 
-<div class="d-flex justify-content-center align-items-center vh-100">
+<div class="d-flex justify-content-center align-items-center vh-100 background">
   <div>
-    <span class="d-block text-center text-white">Obispado Tarija</span>
-    <mat-divider></mat-divider>
-    <div class="text-center pt-4">
-      <mat-icon class="account_img"> account_circle </mat-icon>
+    <!-- <div class="">
+      <img src="../../assets/Images/logoObispado.png" />
     </div>
-    <p class="text-center text-white">Bienvenido</p>
-    <form (ngSubmit)="Login()">
-      <div class="form-floating mb-3">
-        <input
-          type="email"
-          class="form-control"
-          matInput
-          [(ngModel)]="UserLogin.User"
-          id="floatingUser"
-          placeholder="Correo"
-          name="email"
-        />
-        <label for="floatingUser">Correo</label>
+    <mat-divider
+      vertical
+      class="vertical-divider"
+      fxHide.xs="true"
+    ></mat-divider> -->
+    <div class="container-login">
+      <span class="d-block text-center text-white mt-3">Obispado Tarija</span>
+      <mat-divider></mat-divider>
+      <div class="text-center .d-md-none .d-lg-block pt-4">
+        <mat-icon class="account_img"> account_circle </mat-icon>
       </div>
-      <div class="form-floating mb-3">
-        <input
-          type="password"
-          class="form-control"
-          matInput
-          [(ngModel)]="UserLogin.Password"
-          id="floatingPassword"
-          name="pass"
-          placeholder="Contraseña"
-        />
-        <label for="floatingPassword">Contraseña</label>
-      </div>
-      <div class="d-grid">
-        <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
-      </div>
-    </form>
+      <p class="text-center text-white pt-4">Bienvenido</p>
+      <form (ngSubmit)="Login()" class="px-4">
+        <div class="input-group mb-3">
+          <div class="form-floating">
+            <input
+              type="text"
+              class="form-control"
+              id="floatingInputGroup1"
+              placeholder="Username"
+              name="email"
+              [(ngModel)]="UserLogin.User"
+            />
+            <label for="floatingInputGroup1">Correo</label>
+          </div>
+          <span class="input-group-text">@</span>
+        </div>
+        <div class="input-group mb-3">
+          <div class="form-floating">
+            <input
+              type="password"
+              class="form-control"
+              [(ngModel)]="UserLogin.Password"
+              id="floatingPassword"
+              name="pass"
+              placeholder="Contraseña"
+            />
+            <label for="floatingPassword">Contraseña</label>
+          </div>
+          <span class="input-group-text">
+            <i class="bi bi-lock-fill"></i>
+          </span>
+        </div>
+        <div class="d-grid">
+          <button type="submit" class="btn btn-block mb-3">
+            Iniciar Sesión
+          </button>
+        </div>
+      </form>
+    </div>
   </div>
 </div>

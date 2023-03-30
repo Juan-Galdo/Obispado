@@ -1,288 +1,3 @@
-/* * {
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box;
-}
-
-body,
-html {
-  height: 100%;
-  font-family: Poppins-Regular, sans-serif;
-}
-
-ul,
-li {
-  margin: 0px;
-  list-style-type: none;
-}
-
-input {
-  outline: none;
-  border: none;
-}
-
-input:focus::-webkit-input-placeholder {
-  color: transparent;
-}
-input:focus:-moz-placeholder {
-  color: transparent;
-}
-input:focus::-moz-placeholder {
-  color: transparent;
-}
-input:focus:-ms-input-placeholder {
-  color: transparent;
-}
-
-input::-webkit-input-placeholder {
-  color: #999999;
-}
-input:-moz-placeholder {
-  color: #999999;
-}
-input::-moz-placeholder {
-  color: #999999;
-}
-input:-ms-input-placeholder {
-  color: #999999;
-}
-
-button {
-  outline: none !important;
-  border: none;
-  background: transparent;
-}
-
-.limiter {
-  width: 100%;
-  margin: 0 auto;
-}
-
-.container-login100 {
-  width: 100%;
-  min-height: 100vh;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-
-  background: #ffffff;
-  background: linear-gradient(-135deg, #7b7979, #ffffff);
-}
-
-.wrap-login100 {
-  width: 960px;
-  background: rgb(255, 254, 254);
-  border-radius: 10px;
-  overflow: hidden;
-
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  padding: 95px 130px 100px 95px;
-}
-
-.login100-pic {
-  width: 316px;
-}
-
-.login100-pic img {
-  max-width: 100%;
-}
-
-.login100-form {
-  width: 290px;
-}
-
-.login100-form-title {
-  font-family: Poppins-Bold;
-  font-size: 40px;
-  color: #000000;
-  line-height: 1.2;
-  text-align: center;
-
-  width: 100%;
-  display: block;
-  padding-bottom: 54px;
-}
-
-
-
-.input100 {
-  font-family: Poppins-Medium;
-  font-size: 20px;
-  line-height: 1.5;
-  color: #000000;
-
-  display: block;
-  width: 100%;
-  background: #e6e6e6d9;
-  height: 52px;
-  border-radius: 25px;
-  padding: 0 30px 0 68px;
-}
-
-.focus-input100 {
-  display: block;
-  position: absolute;
-  border-radius: 25px;
-  bottom: 0;
-  left: 0;
-  z-index: -1;
-  width: 100%;
-  height: 100%;
-  box-shadow: 0px 0px 0px 0px;
-  color: #c91d0a;
-}
-
-.input100:focus + .focus-input100 {
-  -webkit-animation: anim-shadow 0.5s ease-in-out forwards;
-  animation: anim-shadow 0.5s ease-in-out forwards;
-}
-
-@-webkit-keyframes anim-shadow {
-  to {
-    box-shadow: 0px 0px 70px 25px;
-    opacity: 0;
-  }
-}
-
-@keyframes anim-shadow {
-  to {
-    box-shadow: 0px 0px 70px 25px;
-    opacity: 0;
-  }
-}
-
-.symbol-input100 {
-  font-size: 15px;
-
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-  align-items: center;
-  position: absolute;
-  border-radius: 25px;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  padding-left: 35px;
-  pointer-events: none;
-  color: #666666;
-
-  -webkit-transition: all 0.4s;
-  -o-transition: all 0.4s;
-  -moz-transition: all 0.4s;
-  transition: all 0.4s;
-}
-
-.input100:focus + .focus-input100 + .symbol-input100 {
-  color: #d92b3a;
-  padding-left: 28px;
-}
-
-.container-login100-form-btn {
-  width: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding-top: 20px;
-}
-
-.login100-form-btn {
-  font-family: Poppins-Bold;
-  font-size: 15px;
-  font-weight: 400;
-  line-height: 1.5;
-  color: #fff;
-  text-transform: uppercase;
-  cursor: pointer;
-  width: 100%;
-  height: 50px;
-  border-radius: 25px;
-  background: #d92b3a;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0 25px;
-
-  -webkit-transition: all 0.4s;
-  -o-transition: all 0.4s;
-  -moz-transition: all 0.4s;
-  transition: all 0.4s;
-}
-
-.login100-form-btn:hover {
-  background: #bf9663;
-}
-
-@media (max-width: 992px) {
-  .wrap-login100 {
-    padding: 177px 90px 33px 85px;
-  }
-
-  .login100-pic {
-    width: 35%;
-  }
-
-  .login100-form {
-    width: 50%;
-  }
-}
-
-@media (max-width: 768px) {
-  .wrap-login100 {
-    padding: 100px 80px 33px 80px;
-  }
-
-  .login100-pic {
-    display: none;
-  }
-
-  .login100-form {
-    width: 100%;
-  }
-}
-
-@media (max-width: 576px) {
-  .wrap-login100 {
-    padding: 100px 15px 33px 15px;
-  }
-} */
-
-/*Tamaño de la Pagina*/
-.wrap-input100 {
-  position: relative;
-  width: 100%;
-  z-index: 1;
-  margin-bottom: 10px;
-}
-.main-page {
-  height: 100%;
-  width: 100%;
-  align-items: center;
-  justify-content: center;
-  display: flex;
-}
 /*Imagen de Fondo*/
 .background {
   height: 100%;
@@ -294,31 +9,19 @@ button {
   position: absolute;
 }
 
-/*Tamaño de la Tarjeta donde esta el contenido, esta configuracion es para WEB de PC*/
-/*Mas abajo esta la configuracion para moviles*/
-.mat-card {
-  width: 900px;
-  height: 680px;
-  max-width: 100%;
+.container-login {
   background-color: rgba(52, 44, 44, 0.412);
   backdrop-filter: blur(11px);
 }
 
-/*Cambiamos el titulo de la tarjeta por un texto BOLD y centralizado*/
-.mat-card-title {
-  text-align: center;
-  font-weight: bold;
-}
-/*Alineamos el Logo y el margin adecuamos al medio, el transform reescala el tamaño del icono*/
-/*Puede usarse una imagen en lugar del icono, nomas que por paja puse el icono*/
-.logo {
-  padding-left: 18px;
-  margin: 60px;
-  transform: scale(3.5);
+/* Divisor */
+.mat-divider {
+  border-color: rgba(255, 255, 255, 0.741);
 }
 
 /*Una linea vertical que divide el login*/
 .vertical-divider {
+  display: none;
   height: 450px;
   border: 2px solid;
   border-color: white;
@@ -327,48 +30,23 @@ button {
 .mat-divider {
   border-color: rgba(255, 255, 255, 0.741);
 }
-/*Alineamos el formulario para la vista de PC*/
-.formulario {
-  padding-right: 18px;
-}
+
 /*Esta imagen del formulario, igual pueden reemplazar por otra imagen*/
 .account_img {
   transform: scale(6);
   margin: 30px;
   color: white;
 }
-/*Titulo donde dice 'BIENVENIDO'*/
-.account_title {
-  margin: 22px;
-  font-size: 20px;
-  font-weight: bold;
-  color: white;
-}
-/*Tamaño del formulario y este es responsive*/
-.mat-form-field {
-  width: 100%;
-}
-/*El Contenido del Mat-Card sera centrado al medio y aumenta su tamaño*/
-.mat-card-content {
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  height: 90%;
-}
+
 /*Colores del boton, el :hover es para cuando se quiera pasar el boton por encima y cambiar el color*/
-.login-btn {
+.btn {
   background-color: #c91d0a;
   color: white;
 }
 
-.login-btn:hover {
+.btn:hover {
   transition: all 0.5s;
   background-color: #bf9663;
-  color: white;
-}
-
-/*Texto para cambiar el color del texto a blanco*/
-.text-white {
   color: white;
 }
 

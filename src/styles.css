@@ -5,13 +5,6 @@
   outline: none;
 }
 
-textarea:focus,
-input:focus,
-input[type]:focus {
-  border-color: rgb(148, 1, 1);
-  outline: 0 none;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -355,10 +348,6 @@ h6 {
   color: white;
 }
 
-input {
-  background: #1bac91;
-  color: #1bac91;
-}
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
