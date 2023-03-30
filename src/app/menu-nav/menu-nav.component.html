@@ -45,7 +45,9 @@
     </a>
   </li>
 
-  <a routerLink="" (click)="logout()" class="nav-link pr-1 mt-auto">
-    <i class="fas fa-sign-out-alt fa-2x"></i>
-  </a>
+  <li [hidden]="!_authService.Parishes()" class="nav-item">
+    <a routerLink="certificatePrint" class="nav-link">
+      Imprimir Certificados
+    </a>
+  </li>
 </ul>
