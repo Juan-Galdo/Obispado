@@ -12,9 +12,8 @@ input[type]:focus {
   outline: 0 none;
 }
 
-.fondo{
-background-color: antiquewhite;
-
+.fondo {
+  background-color: antiquewhite;
 }
 
 * {
@@ -336,11 +335,6 @@ body {
   font-family: "Open Sans", sans-serif;
   color: #444444;
 }
-label {
-  font-family: "Raleway", sans-serif;
-  color: white;
-}
-
 a {
   color: white;
   text-decoration: none;
@@ -365,10 +359,6 @@ h6 {
   color: white;
 }
 
-input {
-  background: #1bac91;
-  color: #1bac91;
-}
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
