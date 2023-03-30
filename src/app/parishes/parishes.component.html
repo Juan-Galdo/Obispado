@@ -16,7 +16,7 @@ por ahora estaria envano hasta que logren conectar al backend -->
  
    <div class="input-group mb-3">
      <a [routerLink]="['/addParish']" class="btn btn-success">Nueva Parroquia</a>
-     <input [(ngModel)]="find" type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+     <input [(ngModel)]="find" type="search" class="form-control rounded" placeholder="Buscar" aria-label="Search" aria-describedby="search-addon" />
      <button class="btn btn-outline-secondary" type="button" (click)="Find()">
        <i class="fas fa-search"></i>
      </button>
@@ -24,7 +24,7 @@ por ahora estaria envano hasta que logren conectar al backend -->
  
    <div class="table-responsive">
      <table class="table table-dark">
-       <thead>
+       <thead class="thead-ligth">
          <tr>
            <th>NOMBRE</th>
            <th>DIRECCION</th>
@@ -56,6 +56,7 @@ por ahora estaria envano hasta que logren conectar al backend -->
        </tbody>
      </table>
    </div>
+
  
    <div class="d-flex justify-content-center mt-4">
      <div class="col-md-2">
