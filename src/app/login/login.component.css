@@ -1,42 +1,34 @@
-/*Imagen de Fondo*/
 .background {
-  height: 99%;
-  width: 99%;
-  background-image: url("../../assets/Images/bg1.jpeg");
+  width: 100%;
+  background-image: url("../../assets/Images/bg1.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
+.logo-obispado {
+  height: 200px;
+}
+
+.custom-text {
+  font-size: 1.35rem;
+}
+
 .container-login {
   background-color: rgba(52, 44, 44, 0.412);
   backdrop-filter: blur(11px);
-}
-
-/* Divisor */
-.mat-divider {
-  border-color: rgba(255, 255, 255, 0.741);
-}
-
-/*Una linea vertical que divide el login*/
-.vertical-divider {
-  display: none;
-  height: 450px;
-  border: 2px solid;
-  border-color: white;
+  width: 750px;
 }
 
 .mat-divider {
   border-color: rgba(255, 255, 255, 0.741);
 }
 
-/*Esta imagen del formulario, igual pueden reemplazar por otra imagen*/
 .account_img {
   transform: scale(4);
   color: white;
 }
 
-/*Colores del boton, el :hover es para cuando se quiera pasar el boton por encima y cambiar el color*/
 .btn {
   background-color: #c91d0a;
   color: white;
@@ -48,32 +40,44 @@
   color: white;
 }
 
-/*PA CUANDO SEA EN VISTA TELEFONO*/
+.container-logo {
+  padding-top: 3rem;
+}
 
-/*Cuando se trate de un telefono menor de 600px se haran los siguientes cambios automaticamente*/
-@media (min-width: 768px) {
-  /*La Tarjeta se adecua al tamaño del telefono*/
-  .mat-card {
-    margin: 5px;
-    width: 100%;
-    height: 100%;
-    max-width: 100%;
-    background-color: rgba(52, 44, 44, 0.412);
-    backdrop-filter: blur(10px);
-  }
-  /*El Icono del formulario se reduce*/
+@media (max-width: 768px) {
   .account_img {
-    transform: scale(4);
-    margin: 30px;
+    display: none;
   }
-  /*El Contenido del formulario se reduce*/
-  .mat-card-content {
+
+  .container-logo-obispado {
+    margin-top: 1.5rem;
+  }
+
+  .container-logo {
+    padding: 0;
+  }
+
+  .background {
+    overflow: hidden;
+  }
+}
+
+@media (max-width: 576px) {
+  .logo-obispado {
+    display: none;
+  }
+
+  .account_img {
+    display: block;
+  }
+
+  .container-logo {
+    display: flex;
     justify-content: center;
     align-items: center;
-    display: flex;
   }
-  /*Alineamos el formulario*/
-  .formulario {
-    padding-right: 0px;
+
+  .background {
+    overflow: hidden;
   }
 }
