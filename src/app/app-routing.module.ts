@@ -24,7 +24,6 @@ import { CertificateParishAddComponent } from './certificate-parish-add/certific
 import { MenuNavComponent } from './menu-nav/menu-nav.component';
 
 const routes: Routes = [
-  /*** Se silencio estas rutas donde el Guardia impide que se acceda */
   { path: 'parish', component: ParishesComponent, canActivate: [AuthGuard] },
   {
     path: 'parish/:Id',
