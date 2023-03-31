@@ -23,13 +23,13 @@ por ahora estaria envano hasta que logren conectar al backend -->
       aria-describedby="search-addon"
     />
     <button class="btn btn-outline-secondary" type="button" (click)="Find()">
-      <i class="bi bi-search"></i>
+      <i class="bi bi-searchs"></i>
     </button>
   </div>
 
   <div class="table-responsive">
     <table class="table table-dark">
-      <thead class="thead-ligth">
+      <thead >
         <tr>
           <th>NOMBRE</th>
           <th>DIRECCION</th>
@@ -99,8 +99,7 @@ por ahora estaria envano hasta que logren conectar al backend -->
             <button
               class="page-link"
               *ngIf="metaData.HasNextPage"
-              (click)="Next()"
-            >
+              (click)="Next()">
               Siguiente
             </button>
             <button class="page-link disabled" *ngIf="!metaData.HasNextPage">
