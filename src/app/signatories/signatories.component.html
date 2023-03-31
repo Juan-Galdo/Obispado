@@ -9,12 +9,18 @@ por ahora estaria envano hasta que logren conectar al backend -->
 <!-- Se supone que aqui, al lado del "class=container" va lo que es  , sirve solo para mostrar o no el icono de carga, lo borre -->
 <div class="container">
    
-   <div style="text-align: center;">
+   <!-- <div style="text-align: center;">
       <h2>FIRMANTES</h2>
-   </div>
+   </div> -->
+
+   <div class="d-flex justify-content-center align-items-center mb-5 mt-4">
+      <h2>FIRMANTES</h2>
+    </div>
+
    <p>
       <a [routerLink]="['/addSignatory']" class="btn btn-success ">Nueva Encargado</a>
    </p>
+
    <div class="input-group mb-3">
       <div class="input-group-prepend">
          <button (click)="Find()" class="btn btn-outline-secondary" type="button">BUSCAR</button>
@@ -22,7 +28,9 @@ por ahora estaria envano hasta que logren conectar al backend -->
       <input [(ngModel)]="find" type="text" class="form-control" placeholder=""
       aria-label="INGRESE SU BUSQUEDA" aria-describedby="basic-addon1">
    </div>
+
    <div class="table-responsive">
+
       <table class="table table-striped table-dark " >
          <thead >
             <tr>
@@ -33,6 +41,7 @@ por ahora estaria envano hasta que logren conectar al backend -->
                <th colspan="3">ACCIONES</th>
             </tr>
          </thead>
+
          <tbody>
             <tr *ngIf="(signatoriesList)?.length==0">
               <td colspan="5" style="text-align: center;">
@@ -62,33 +71,42 @@ por ahora estaria envano hasta que logren conectar al backend -->
                </td>
             </tr>
          </tbody>
+
       </table>
    </div>
+
    <div style="text-align: center;">
       <ul class="pagination">
+
          <li class="page-item col-md-1 " >
             <select class="form-control" (change)="Quantity($event)">
               <option selected disabled>{{optionSelect}}</option>
               <option *ngFor="let web of list">{{web}}</option>
             </select>
          </li>
+
          &nbsp;
          <li class="page-item" >
             <p *ngIf="metaData.HasPreviousPage" class="form-control" type="button" (click)="Preview()">Anterior</p>
             <p *ngIf="!metaData.HasPreviousPage" class="form-control" type="button">Anterior</p>
          </li>
+
          <li class="page-item page-item ">
             <p class="form-control" >{{metaData.CurrentPage}}</p>
          </li>
+
          <li class="page-item" >
             <p *ngIf="metaData.HasNextPage" class="form-control" type="button"(click)="Next()">Siguiente</p>
             <p *ngIf="!metaData.HasNextPage" class="form-control"  type="button">Siguiente</p>
          </li>
       </ul>
+
       <ul class="pagination">
+
          <li class="page-item">
             <label  for="TotalPages">P&aacute;gina {{metaData.CurrentPage}} de {{metaData.TotalPages}}  </label>
          </li>
+         
       </ul>
    </div>
 </div>
