@@ -1,3 +1,4 @@
+
 import { Component, OnInit } from '@angular/core';
 import { LoginService } from '../services/login.service';
 
@@ -8,7 +9,17 @@ import { LoginService } from '../services/login.service';
 })
 export class MenuNavComponent {
 
+  isSidebarOpen = false;
+
   constructor(public _authService:LoginService) {}
+  ngOnInit(): void {
+
+  }
+
+  toggleSidebar() {
+    this.isSidebarOpen = !this.isSidebarOpen;
+  }
+
   logout(): void {
     this._authService.loggedOut();
   }

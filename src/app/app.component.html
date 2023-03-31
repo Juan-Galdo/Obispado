@@ -1,7 +1,15 @@
-<div class="container-fluid fondo">
+
+<app-menu-nav *ngIf="_authService.loggedIn()"></app-menu-nav>
+<router-outlet></router-outlet>
+
+<!-- BASURA
+  <div class="container-fluid fondo">
+
   <div class="row flex-nowrap">
+
     <div *ngIf="_authService.loggedIn()"
       class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
+
       <div class="d-flex flex-column align-items-center align-items-sm-start px-10 pt-21 min-vh-100">
         <app-menu-nav></app-menu-nav>    
         <a (click)="logout()" class="nav-link mt-auto nav-item mb-3 px-4 ml-auto mx-2">
@@ -13,4 +21,4 @@
       <router-outlet></router-outlet>
     </div>
   </div>
-</div>
+</div> -->
