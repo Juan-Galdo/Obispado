@@ -45,54 +45,78 @@ width="80px"
 </ul> -->
 
 <div class="wrapper d-flex align-items-stretch" >
+
   <nav id="sidebar" [class.active]="isSidebarOpen">
+
     <div class="custom-menu">
       <button type="button" id="sidebarCollapse" class="btn btn-primary" (click)="toggleSidebar()"></button>
     </div>
+
     <div  class="img bg-wrap text-center py-4"   style="background-image: url(images/bg_1.jpg)">
+
       <div class="user-logo">
         <div class="img"  style="background-image: url(../../assets/Images/logoObispado.png)" ></div>
         <h3>Sistema Obispado</h3>
       </div>
+
     </div>
+
     <ul class="list-unstyled components mb-5">
       <li [hidden]="!_authService.loggedIn()" class="active">
-        <a routerLink="planilla"><span class="fa fa-home mr-3"></span> Planilla</a>
+        <a routerLink="planilla">
+          <span class="bi bi-file-ppt mr-3"></span> Planilla
+        </a>
       </li>
-      <li [hidden]="!_authService.loggedIn()">
-        
-        <a routerLink="parish"
-          ><span class="fa fa-home mr-3"></span>
-          Parroquias</a>
 
-      </li>
       <li [hidden]="!_authService.loggedIn()">
-        <a routerLink="signatory"><span class="fa fa-gift mr-3"></span>Firmantes</a>
+        <a routerLink="parish">
+          <span class="bi bi-bank mr-3"></span> Parroquias
+        </a>
       </li>
+
+      <li [hidden]="!_authService.loggedIn()">
+        <a routerLink="signatory">
+          <span class="bi bi-vector-pen mr-3"></span> Firmantes
+
+        </a>
+      </li>
+
       <li [hidden]="!_authService.loggedIn()">
         <a routerLink="certificate"
-          ><span class="fa fa-trophy mr-3"></span> Certificados</a
-        >
+          ><span class="bi bi-file-text mr-3"></span> Certificados
+        </a>
       </li>
+
       <li [hidden]="!_authService.loggedIn()">
         <a routerLink="certificatePending"
-          ><span class="fa fa-cog mr-3"></span> Certificados Pendientes</a
-        >
+          ><span class="bi bi-file-zip mr-3"></span> Certificados Pendientes
+        </a>
       </li>
+
       <li [hidden]="!_authService.loggedIn()">
-        <a routerLink="certificatePrint"><span class="fa fa-support mr-3"></span>Certificados Parroquia</a>
+        <a routerLink="certificatePrint">
+          <span class="bi bi-file-richtext mr-3"></span> Certificados Parroquia
+        </a>
       </li>
+
       <li [hidden]="!_authService.loggedIn()">
-        <a routerLink="user"><span class="fa fa-support mr-3"></span>Usuarios</a>
+        <a routerLink="user">
+          <span class="bi bi-person-square mr-3"></span> Usuarios
+        </a>
       </li>
+
       <li [hidden]="!_authService.loggedIn()">
-        <a routerLink="certificatePrint"><span class="fa fa-support mr-3"></span>Imprimir Certificados</a>
+        <a routerLink="certificatePrint">
+          <span class="bi bi-printer mr-3"></span>Imprimir Certificados
+        </a>
       </li>
+
       <li>
-        <a (click)="logout()"
-          ><span class="bi bi-box-arrow-right text-white"></span> Cerrar Sesion</a
-        >
+        <a (click)="logout()">
+          <span class="bi bi-box-arrow-right text-white"></span> Cerrar Sesion
+        </a>
       </li>
+      
     </ul>
   </nav>
 

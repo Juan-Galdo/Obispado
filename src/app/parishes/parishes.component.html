@@ -8,11 +8,13 @@ por ahora estaria envano hasta que logren conectar al backend -->
 </div> -->
 <!-- Se supone que aqui, al lado del "class=container" va lo que es  , sirve solo para mostrar o no el icono de carga, lo borre -->
 <div class="container mt-4">
+
   <div class="d-flex justify-content-center align-items-center mb-5">
     <h2>PARROQUIAS</h2>
   </div>
 
   <div class="input-group mb-3">
+
     <a [routerLink]="['/addParish']" class="btn btn-success">Nueva Parroquia</a>
     <input
       [(ngModel)]="find"
@@ -22,8 +24,9 @@ por ahora estaria envano hasta que logren conectar al backend -->
       aria-label="Search"
       aria-describedby="search-addon"
     />
+
     <button class="btn btn-outline-secondary" type="button" (click)="Find()">
-      <i class="bi bi-searchs"></i>
+      <i class="bi bi-search"></i>
     </button>
   </div>
 
@@ -52,12 +55,12 @@ por ahora estaria envano hasta que logren conectar al backend -->
               routerLink="/parish/{{ parish.id }}"
               class="btn btn-primary btn-sm"
             >
-              <i class="fa fa-edit"></i>
+              <i class="bi bi-pencil-square"></i>
             </a>
           </td>
           <td>
             <button class="btn btn-danger btn-sm" (click)="delete(parish.id)">
-              <i class="fa fa-trash"></i>
+              <i class="bi bi-trash"></i>
             </button>
           </td>
         </tr>
