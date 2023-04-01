@@ -17,7 +17,7 @@ por ahora estaria envano hasta que logren conectar al backend -->
       <h2>FIRMANTES</h2>
    </div>
 
-   <p>
+   <!-- <p>
       <a [routerLink]="['/addSignatory']" class="btn btn-success ">Nueva Encargado</a>
    </p>
 
@@ -27,7 +27,24 @@ por ahora estaria envano hasta que logren conectar al backend -->
       </div>
       <input [(ngModel)]="find" type="text" class="form-control" placeholder=""
       aria-label="INGRESE SU BUSQUEDA" aria-describedby="basic-addon1">
-   </div>
+   </div> -->
+
+   <div class="input-group mb-3">
+
+      <a [routerLink]="['/addSignatory']" class="btn btn-success">Nuevo Encargado</a>
+      <input
+        [(ngModel)]="find"
+        type="search"
+        class="form-control rounded"
+        placeholder="Buscar"
+        aria-label="Search"
+        aria-describedby="search-addon"
+      />
+  
+      <button class="btn btn-outline-secondary" type="button" (click)="Find()">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
 
    <div class="table-responsive">
 
@@ -87,7 +104,10 @@ por ahora estaria envano hasta que logren conectar al backend -->
 
          &nbsp;
          <li class="page-item" >
-            <p *ngIf="metaData.HasPreviousPage" class="form-control" type="button" (click)="Preview()">Anterior</p>
+            <p *ngIf="metaData.HasPreviousPage" 
+            class="form-control" 
+            type="button" (click)="
+            Preview()">Anterior</p>
             <p *ngIf="!metaData.HasPreviousPage" class="form-control" type="button">Anterior</p>
          </li>
 

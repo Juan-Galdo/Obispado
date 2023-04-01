@@ -93,11 +93,13 @@ por ahora estaria envano hasta que logren conectar al backend -->
               Anterior
             </button>
           </li>
+
           <li class="page-item">
             <span class="page-link"
               >{{ metaData.CurrentPage }} de {{ metaData.TotalPages }}</span
             >
           </li>
+
           <li class="page-item">
             <button
               class="page-link"
@@ -105,10 +107,12 @@ por ahora estaria envano hasta que logren conectar al backend -->
               (click)="Next()">
               Siguiente
             </button>
+            
             <button class="page-link disabled" *ngIf="!metaData.HasNextPage">
               Siguiente
             </button>
           </li>
+
         </ul>
       </nav>
     </div>

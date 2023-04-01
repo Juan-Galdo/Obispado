@@ -1,6 +1,6 @@
 <div class="wrapper d-flex vh-100">
   <!-- Sidebar -->
-  <nav id="sidebar" [class.active]="isSidebarOpen">
+  <nav id="sidebar" *ngIf="_authService.loggedIn()" [class.active]="isSidebarOpen">
     <div class="custom-menu">
       <button
         type="button"
@@ -79,6 +79,7 @@
       </li>
     </ul>
   </nav>
+
   <!-- Page Content  -->
   <div
     id="content"
