@@ -5,15 +5,12 @@
 #sidebar {
   min-width: 300px;
   max-width: 300px;
-  background: #32373d;
+  background: #98774e;
   color: #fff;
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;
   position: relative;
-}
-#sidebar .h6 {
-  color: #fff;
 }
 #sidebar.active {
   margin-left: -300px;
@@ -29,17 +26,6 @@
 #sidebar.active .btn.btn-primary:after {
   display: none;
 }
-#sidebar h1 {
-  margin-bottom: 20px;
-  font-weight: 700;
-  font-size: 20px;
-}
-#sidebar h1 .logo {
-  color: #fff;
-  display: block;
-  padding: 10px 30px;
-  background: #2f89fc;
-}
 #sidebar ul.components {
   padding: 0;
 }
@@ -53,6 +39,7 @@
   font-size: 14px;
 }
 #sidebar ul li a {
+  font-weight: bold;
   padding: 15px 30px;
   display: block;
   color: rgba(255, 255, 255, 0.6);
@@ -117,7 +104,7 @@
   }
 }
 #sidebar .custom-menu .btn.btn-primary {
-  background: #2f89fc;
+  background: #98774e;
   border-color: transparent;
   position: relative;
   color: #000;
