@@ -1,6 +1,10 @@
-<div class="wrapper d-flex vh-100">
+<div class="wrapper d-flex justify-content-center align-items-center vh-100">
   <!-- Sidebar -->
-  <nav id="sidebar" *ngIf="_authService.loggedIn()" [class.active]="isSidebarOpen">
+  <nav
+    id="sidebar"
+    *ngIf="_authService.loggedIn()"
+    [class.active]="isSidebarOpen"
+  >
     <div class="custom-menu">
       <button
         type="button"
@@ -81,11 +85,7 @@
   </nav>
 
   <!-- Page Content  -->
-  <div
-    id="content"
-    class="d-flex justify-content-center align-items-center"
-    [class.active]="isSidebarOpen"
-  >
+  <div class="vw-100">
     <router-outlet></router-outlet>
   </div>
 </div>
