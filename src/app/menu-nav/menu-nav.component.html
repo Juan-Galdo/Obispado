@@ -29,7 +29,8 @@
     </div>
 
     <ul class="list-unstyled components mb-5">
-      <li [hidden]="!_authService.loggedIn()" class="active">
+      
+      <li [hidden]="!_authService.loggedIn()">
         <a routerLink="planilla">
           <span class="bi bi-file-ppt mr-3"></span> Planilla
         </a>
