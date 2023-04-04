@@ -32,55 +32,64 @@
       
       <li [hidden]="!_authService.loggedIn()">
         <a routerLink="planilla">
-          <span class="bi bi-file-ppt mr-3"></span> Planilla
+          <div style="float:left;"><span class="bi bi-file-ppt mr-3 wrapper"></span></div>
+          <div style="margin-left: 20px;">Planilla</div>
         </a>
       </li>
 
       <li [hidden]="!_authService.loggedIn()">
         <a routerLink="parish">
-          <span class="bi bi-bank mr-3"></span> Parroquias
+          <div style="float:left;"><span class="bi bi-bank mr-3"></span></div>
+          <div style="margin-left: 20px;">Parroquias</div>
         </a>
       </li>
 
       <li [hidden]="!_authService.loggedIn()">
         <a routerLink="signatory">
-          <span class="bi bi-vector-pen mr-3"></span> Firmantes
+          <div style="float:left;"><span class="bi bi-vector-pen mr-3"></span></div>
+          <div style="margin-left: 20px;">Firmantes</div>
         </a>
       </li>
 
       <li [hidden]="!_authService.loggedIn()">
-        <a routerLink="certificate"
-          ><span class="bi bi-file-text mr-3"></span> Certificados
+        <a routerLink="certificate">
+          <div style="float:left;"><span class="bi bi-file-text mr-3"></span>Certificados</div>
+          <div style="margin-left: 20px;">Certificados</div>
         </a>
       </li>
 
       <li [hidden]="!_authService.loggedIn()">
-        <a routerLink="certificatePending"
-          ><span class="bi bi-file-zip mr-3"></span> Certificados Pendientes
+        <a routerLink="certificatePending">
+          <div style="float:left;"><span class="bi bi-file-zip mr-3"></span></div>
+          <div style="margin-left: 20px;">Certificados Pendientes</div>
         </a>
       </li>
 
       <li [hidden]="!_authService.loggedIn()">
         <a routerLink="certificatePrint">
-          <span class="bi bi-file-richtext mr-3"></span> Certificados Parroquia
+          <div style="float:left;"><span class="bi bi-file-richtext mr-3"></span></div>
+          <div style="margin-left: 20px;">Certificados Parroquia</div>
         </a>
       </li>
 
       <li [hidden]="!_authService.loggedIn()">
         <a routerLink="user">
-          <span class="bi bi-person-square mr-3"></span> Usuarios
+          <div style="float:left;"><span class="bi bi-person-square mr-3"></span></div>
+          <div style="margin-left: 20px;">Usuarios</div>
         </a>
       </li>
 
       <li [hidden]="!_authService.loggedIn()">
         <a routerLink="certificatePrint">
-          <span class="bi bi-printer mr-3"></span>Imprimir Certificados
+          <div style="float:left;"><span class="bi bi-printer mr-3"></span></div>
+          <div style="margin-left: 20px;">Imprimir Certificados</div>
         </a>
       </li>
 
       <li>
         <a (click)="logout()">
-          <span class="bi bi-box-arrow-right text-white"></span> Cerrar Sesion
+          <div style="float:left;"><span class="bi bi-box-arrow-right text-white"></span></div>
+          <div style="margin-left: 20px;">Cerrar Sesion</div>
         </a>
       </li>
     </ul>
