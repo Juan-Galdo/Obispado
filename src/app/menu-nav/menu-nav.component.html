@@ -1,9 +1,10 @@
-<div class="wrapper d-flex justify-content-center align-items-center vh-100">
+<div class="wrapper d-flex justify-content-center align-items-center">
   <!-- Sidebar -->
   <nav
     id="sidebar"
     *ngIf="_authService.loggedIn()"
     [class.active]="isSidebarOpen"
+    class="vh-100"
   >
     <div class="custom-menu">
       <button
