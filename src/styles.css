@@ -19,9 +19,9 @@
   margin-right: -50px;
 }
 #sidebar.active .btn.btn-primary:before {
-  content: "\f053";
+  content: "\f054";
   font-family: "FontAwesome";
-  right: 2px !important;
+  right: 0 !important;
 }
 #sidebar.active .btn.btn-primary:after {
   display: none;
@@ -65,6 +65,7 @@
   color: #fff;
   background: #2f89fc;
   border-bottom: 1px solid #2f89fc;
+  cursor: pointer;
 }
 #sidebar ul li.active > a {
   background: transparent;
@@ -122,8 +123,8 @@
   color: #fff;
 }
 #sidebar .custom-menu .btn.btn-primary:after {
-  content: "\f054";
-  left: 2px;
+  content: "\f053";
+  left: -4px;
 }
 
 .img {
