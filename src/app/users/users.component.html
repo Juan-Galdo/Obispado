@@ -5,7 +5,7 @@
   </div>
 
   <div class="input-group mb-3">
-    <a [routerLink]="['/addParish']" class="btn btn-success">Nueva Parroquia</a>
+    <a [routerLink]="['/addUser']" class="btn btn-success">Nuevo Usuario</a>
     <input
       [(ngModel)]="find"
       type="search"
@@ -24,16 +24,16 @@
     <table class="table table-secondary">
       <thead>
         <tr>
-            <th>Nombre de usuario</th>
-            <th>Rol</th>
-            <th>Gmail</th>
-            <th>Parroquia</th>
-            <th colspan="2">Acciones</th>
+            <th>NOMBRE DE USUARIO</th>
+            <th>ROL</th>
+            <th>GMAIL</th>
+            <th>PARROQUIA</th>
+            <th colspan="2">ACCIONES</th>
         </tr>
       </thead>
       <tbody>
         <tr *ngIf="usersList?.length == 0">
-          <td colspan="6" style="text-align: center">
+          <td colspan="5" style="text-align: center">
             <span>No se encontraron resultados ...</span>
           </td>
         </tr>
@@ -44,7 +44,7 @@
           <td>{{ user.ParishName }}</td>
           <td>
             <a
-              routerLink="/parish/{{ user.id }}"
+              routerLink="/user/{{ user.id }}"
               class="btn btn-primary btn-sm"
             >
               <i class="bi bi-pencil-square"></i>
@@ -62,11 +62,14 @@
 
   <div class="d-flex justify-content-center mt-4">
     <div class="col-md-2">
+
       <select class="form-control" (change)="Quantity($event)">
         <option selected disabled>{{ optionSelect }}</option>
         <option *ngFor="let web of list">{{ web }}</option>
       </select>
+
     </div>
+
     <div class="col-md-10">
       <nav aria-label="Page navigation example">
         <ul class="pagination">

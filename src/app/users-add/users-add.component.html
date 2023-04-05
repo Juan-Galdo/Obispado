@@ -1,7 +1,11 @@
 
 <div class="container" >
 
-<form class="row g-3" class="was-validated">
+  <div class="d-flex justify-content-center align-items-center mb-5 mt-4">
+    <h2>NUEVO USUARIO</h2>
+  </div>
+
+  <form class="row g-3" class="was-validated">
   <div>
     <div class="submit-form row g-2 ">
 
@@ -66,7 +70,7 @@
           <option value="Parishes">Parroquias</option>
           <option value="Administrator">Administrador</option>
         </select>
-        <label for="floatingInputGrid">seleccione un rol para el usuario.</label>
+        <label for="floatingInputGrid">Seleccione un rol para el usuario.</label>
       </div>
     </div>
 
@@ -83,7 +87,7 @@
         <div class="invalid-feedback" *ngIf="Gmail.errors?.required" >
           Debe seleccionar una parroquia.
         </div>
-       <label for="floatingInputGrid">seleccione una parroquia.</label>
+       <label for="floatingInputGrid">Seleccione una parroquia.</label>
       </div>
     </div>
 
@@ -93,5 +97,6 @@
       <button routerLink="/user" class="btn btn-warning " >Atras</button> &nbsp;
       <button (click)="saveCertificate()" class="btn btn-success">Guardar</button>
     </div>
-  </div>
+
+</div>
 
