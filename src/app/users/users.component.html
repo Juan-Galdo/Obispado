@@ -1,136 +1,113 @@
-<form autocomplete="off">
-  <div class="container">
-    <!-- Aqui silencie este fragmento del codigo que es el icono de carga sobrepuesto en la pantalla, este desaparece si recibe info del backend
-por ahora estaria envano hasta que logren conectar al backend -->
-    <div class="overlay" *ngIf="!load" >
-   <div class="loader-container">
-      <div class="loader"></div>
-      <div class="loader2"></div>
-   </div>
-</div>
-    <!-- Se supone que aqui, al lado del "class=container" va lo que es  , sirve solo para mostrar o no el icono de carga, lo borre -->
 
-    <div class="container">
-      <br />
-      <br />
-      <div style="text-align: center">
-        <h2>USUARIOS</h2>
-      </div>
-      <p>
-        <a [routerLink]="['/addUser']" class="btn btn-success">Nuevo Usuario</a>
-      </p>
-      <!--  Ejemplo de Angular Material con un Card -->
-      
+<div class="px-5 row justify-content-center">
+  <div class="mb-5 text-center">
+    <h2>USUARIOS</h2>
+  </div>
 
-      <div class="input-group mb-3">
-        <div class="input-group-prepend">
-          <button
-            (click)="Find()"
-            class="btn btn-outline-secondary"
-            type="button">
-            BUSCAR
-          </button>
-        </div>
-        <input
-          [(ngModel)]="find"
-          type="text"
-          class="form-control"
-          placeholder=""
-          aria-label="INGRESE SU BUSQUEDA"
-          aria-describedby="basic-addon1"
-        />
-      </div>
-      <div class="table-responsive">
-        <table class="table table-dark">
-          <thead>
-            <tr>
-              <th>Nombre de usuario</th>
-              <th>Rol</th>
-              <th>Gmail</th>
-              <th>Parroquia</th>
-              <th colspan="2">Acciones</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr *ngIf="usersList?.length == 0">
-              <td colspan="6" style="text-align: center">
-                <span> No se encontraron resultados ...</span>
-              </td>
-            </tr>
-            <tr *ngFor="let user of usersList">
-              <td>{{ user.userName }}</td>
-              <td>{{ user.role }}</td>
-              <td>{{ user.gmail }}</td>
-              <td>{{ user.ParishName }}</td>
-              <td>
-                <a
-                  routerLink="/user/{{ user.id }}"
-                  class="btn btn-space btn-primary"
-                >
-                  <i class="fa fa-edit fa-2x"></i>
-                </a>
-              </td>
-              <td>
-                <a (click)="delete(user.id)" class="btn btn-space btn-danger">
-                  <i class="fa fa-trash fa-2x"></i>
-                </a>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <div style="text-align: center">
+  <div class="input-group mb-3">
+    <a [routerLink]="['/addParish']" class="btn btn-success">Nueva Parroquia</a>
+    <input
+      [(ngModel)]="find"
+      type="search"
+      class="form-control rounded"
+      placeholder="Buscar"
+      aria-label="Search"
+      aria-describedby="search-addon"
+    />
+
+    <button class="btn btn-outline-secondary" type="button" (click)="Find()">
+      <i class="bi bi-search"></i>
+    </button>
+  </div>
+
+  <!-- <div class="table-responsive"> -->
+    <table class="table table-secondary">
+      <thead>
+        <tr>
+            <th>Nombre de usuario</th>
+            <th>Rol</th>
+            <th>Gmail</th>
+            <th>Parroquia</th>
+            <th colspan="2">Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngIf="usersList?.length == 0">
+          <td colspan="6" style="text-align: center">
+            <span>No se encontraron resultados ...</span>
+          </td>
+        </tr>
+        <tr *ngFor="let user of usersList">
+          <td>{{ user.userName }}</td>
+          <td>{{ user.role }}</td>
+          <td>{{ user.gmail }}</td>
+          <td>{{ user.ParishName }}</td>
+          <td>
+            <a
+              routerLink="/parish/{{ user.id }}"
+              class="btn btn-primary btn-sm"
+            >
+              <i class="bi bi-pencil-square"></i>
+            </a>
+          </td>
+          <td>
+            <button class="btn btn-danger btn-sm" (click)="delete(user.id)">
+              <i class="bi bi-trash"></i>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+<!--   </div> -->
+
+  <div class="d-flex justify-content-center mt-4">
+    <div class="col-md-2">
+      <select class="form-control" (change)="Quantity($event)">
+        <option selected disabled>{{ optionSelect }}</option>
+        <option *ngFor="let web of list">{{ web }}</option>
+      </select>
+    </div>
+    <div class="col-md-10">
+      <nav aria-label="Page navigation example">
         <ul class="pagination">
-          <li class="page-item col-md-1">
-            <select class="form-control" (change)="Quantity($event)">
-              <option selected disabled>{{ optionSelect }}</option>
-              <option *ngFor="let web of list">{{ web }}</option>
-            </select>
-          </li>
-          &nbsp;
           <li class="page-item">
-            <p
+            <button
+              class="page-link"
               *ngIf="metaData.HasPreviousPage"
-              class="form-control"
-              type="button"
               (click)="Preview()"
             >
               Anterior
-            </p>
-            <p
+            </button>
+            <button
+              class="page-link disabled"
               *ngIf="!metaData.HasPreviousPage"
-              class="form-control"
-              type="button"
             >
               Anterior
-            </p>
+            </button>
           </li>
-          <li class="page-item page-item">
-            <p class="form-control">{{ metaData.CurrentPage }}</p>
-          </li>
+
           <li class="page-item">
-            <p
+            <span class="page-link"
+              >{{ metaData.CurrentPage }} de {{ metaData.TotalPages }}</span
+            >
+          </li>
+
+          <li class="page-item">
+            <button
+              class="page-link"
               *ngIf="metaData.HasNextPage"
-              class="form-control"
-              type="button"
               (click)="Next()"
             >
               Siguiente
-            </p>
-            <p *ngIf="!metaData.HasNextPage" class="form-control" type="button">
+            </button>
+
+            <button class="page-link disabled" *ngIf="!metaData.HasNextPage">
               Siguiente
-            </p>
+            </button>
           </li>
         </ul>
-        <ul class="pagination">
-          <li class="page-item">
-            <label for="TotalPages"
-              >P&aacute;gina {{ metaData.CurrentPage }} de
-              {{ metaData.TotalPages }}
-            </label>
-          </li>
-        </ul>
-      </div>
+      </nav>
     </div>
   </div>
-</form>
+</div>
+
